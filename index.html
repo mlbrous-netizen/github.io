@@ -198,6 +198,19 @@
             border-bottom: 2px solid var(--lodging);
         }
 
+        /* Day Map Styling */
+        .day-map {
+            height: 220px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid var(--secondary);
+            z-index: 1;
+        }
+        .austin-map {
+            border-color: var(--austin);
+        }
+
         .timeline {
             position: relative;
             padding-left: 20px;
@@ -332,6 +345,7 @@
         <p>15 Days | 10 Travelers | 4 Destinations (Plus an Austin Detour)</p>
     </header>
 
+    <!-- Master Route Map -->
     <div id="route-map"></div>
 
     <div class="overview-grid">
@@ -370,33 +384,44 @@
         <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200&auto=format&fit=crop" alt="London Skyline" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title">Day 1: Arrivals & Settling In (Entire Group)</div>
+            <div class="day-title">Day 1: Arrivals & Settling In</div>
+            <div id="map-day-1" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10:00 AM</span>
                     <div class="timeline-content"><strong>Group Arrivals:</strong> Flights land at LHR. Group meets at designated terminal and takes the Tube/Express to King's Cross.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">2:00 PM</span>
-                    <div class="timeline-content"><strong>Check-In:</strong> Drop bags at the massive King's Cross shared flat and refresh.</div>
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>The Booking Office 1869</strong> (St Pancras) - Splurge on upscale British fare in a stunning neo-gothic ticket hall.<br>
+                            • <em>Option B:</em> <strong>Dishoom King's Cross</strong> - High-energy Bombay-style cafe (great if you aren't doing the Covent Garden location tomorrow).
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">2:30 PM</span>
+                    <div class="timeline-content"><strong>Check-In & Rest:</strong> Drop bags at the massive King's Cross shared flat and refresh.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">4:00 PM</span>
                     <div class="timeline-content">
                         <strong>Afternoon Options:</strong> 
                         <div class="castle-box">
-                            • <em>Option A:</em> Rest at the flat and unpack.<br>
-                            • <em>Option B:</em> Head down to the river for a light, pedestrian-friendly walk along the South Bank to see Big Ben and the London Eye.<br>
-                            • <em>Option C (Nerd Pilgrimage):</em> Take the Tube out to Chiswick for a quick photo-op outside the iconic gates of the <strong>Taskmaster House</strong>.
+                            • <em>Option A:</em> Head down to the river for a light, pedestrian-friendly walk along the South Bank.<br>
+                            • <em>Option B (Nerd Pilgrimage):</em> Take the Tube out to Chiswick for a quick photo-op outside the iconic gates of the <strong>Taskmaster House</strong>.
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">7:00 PM</span>
+                    <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
-                        <strong>Dinner & Pints Option:</strong>
+                        <strong>Dinner Options:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.parcelyard.co.uk/" target="_blank">The Parcel Yard</a></em> <span class="price-tag">(~£15-£25)</span> - Closest, right in King's Cross station.
+                            • <em>Option A:</em> <strong>The Parcel Yard</strong> <span class="price-tag">(~£15-£25)</span> - Closest, massive pub right in King's Cross station.<br>
+                            • <em>Option B:</em> <strong>The Royal George</strong> <span class="price-tag">(~£15-£20)</span> - Casual subterranean pub with big TVs and classic pints.
                         </div>
                     </div>
                 </div>
@@ -404,7 +429,8 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 2: Royal History & West End (Entire Group)</div>
+            <div class="day-title">Day 2: Royal History & West End</div>
+            <div id="map-day-2" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:30 AM</span>
@@ -416,19 +442,32 @@
                         <strong>Castle Options:</strong>
                         <div class="castle-box">
                             • <em>Option A:</em> <strong>Tower of London</strong> (Stay in city, view Crown Jewels).<br>
-                            • <em>Option B:</em> <strong><a href="https://www.rct.uk/visit/windsor-castle" target="_blank">Windsor Castle</a></strong> (Take 45-min train to the royal estate).
+                            • <em>Option B:</em> <strong>Windsor Castle</strong> (Take 45-min train to the royal estate).
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">1:30 PM</span>
-                    <div class="timeline-content"><strong>Lunch:</strong> Return to the city center. Grab casual bites in Covent Garden piazza.</div>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Seven Dials Market</strong> - Massive food hall near Covent Garden where everyone can grab something different.<br>
+                            • <em>Option B:</em> <strong>The Barbary Next Door</strong> - Excellent North African/Mediterranean counter dining.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">3:00 PM</span>
+                    <div class="timeline-content"><strong>Free Time:</strong> Explore the West End, shop, or head back to the flat to change for the evening.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">5:30 PM</span>
                     <div class="timeline-content">
-                        <strong>Pre-Theater Dinner:</strong> 
-                        <div class="dining-box"><a href="https://www.dishoom.com/covent-garden/" target="_blank">Dishoom (Covent Garden)</a> <span class="price-tag">(~£25-£40)</span> - High-energy Bombay cafe.</div>
+                        <strong>Pre-Theater Dinner Options:</strong> 
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Dishoom Covent Garden</strong> <span class="price-tag">(~£25-£40)</span> - Incredible Indian food, perfect for a large group feast before the show.<br>
+                            • <em>Option B:</em> <strong>Flat Iron Covent Garden</strong> <span class="price-tag">(~£20-£30)</span> - Unbeatable value. They only serve one thing: a fantastic, affordable flat iron steak.
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -439,28 +478,45 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 3: Markets & The Thames Path (Entire Group)</div>
+            <div class="day-title">Day 3: Markets & The Thames Path</div>
+            <div id="map-day-3" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10:00 AM</span>
-                    <div class="timeline-content"><strong>Borough Market:</strong> Head to London's most famous food market. Graze on fresh sausage rolls, artisanal cheeses, and strawberries for a massive roaming lunch.</div>
+                    <div class="timeline-content"><strong>Borough Market:</strong> Head to London's most famous food market to graze on fresh artisan foods.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">1:00 PM</span>
-                    <div class="timeline-content"><strong>Thames Walk:</strong> Walk along the river from the market to view the iconic Tower Bridge and the HMS Belfast.</div>
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Borough Market Vendors</strong> - Grab freshly made pasta from Padella or a massive grilled cheese from Kappacasein.<br>
+                            • <em>Option B:</em> <strong>Brother Marcus</strong> (Borough Yards) - Relaxed Eastern Mediterranean sharing plates located right in the arches by the market.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">1:30 PM</span>
+                    <div class="timeline-content"><strong>Thames Walk:</strong> Walk along the river to view the iconic Tower Bridge and the HMS Belfast.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">3:00 PM</span>
                     <div class="timeline-content">
                         <strong>Afternoon Pints:</strong> 
                         <div class="castle-box">
-                            • <em>Bermondsey Beer Mile:</em> Walk down this legendary stretch of railway arches housing some of London's best independent craft taprooms (perfect for any brewery fans in the group).
+                            Walk down the <em>Bermondsey Beer Mile</em>—a legendary stretch of railway arches housing some of London's best independent craft taprooms.
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">7:00 PM</span>
-                    <div class="timeline-content"><strong>Dinner:</strong> Grab proper Fish & Chips at a local pub in Southwark before heading back to pack for tomorrow's split!</div>
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Casse-Croûte</strong> (Bermondsey) - A brilliant, tiny 20-seater French bistro serving classics like boudin noir.<br>
+                            • <em>Option B:</em> <strong>The Anchor Bankside</strong> - Historic Thames-side pub serving excellent traditional fish & chips.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -490,7 +546,7 @@
                     <div class="timeline-content">
                         <strong>Group Dinner:</strong> 
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/disney-hotel-new-york-the-art-of-marvel/downtown-restaurant/" target="_blank">Downtown Restaurant</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Massive Marvel-themed buffet located right in your hotel.
+                            • <em>Downtown Restaurant</em> <span class="price-tag">(Meal Plan Credit)</span> - Massive Marvel-themed buffet located right in your hotel.
                         </div>
                     </div>
                 </div>
@@ -506,14 +562,14 @@
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">11:00 AM</span>
-                    <div class="timeline-content"><strong>Pin Trading:</strong> Head to <strong>Pueblo Trading Post</strong> in Frontierland for daily Euro-exclusive drops and trading. Keep an eye out for rare sets!</div>
+                    <div class="timeline-content"><strong>Pin Trading:</strong> Head to <strong>Pueblo Trading Post</strong> in Frontierland for daily Euro-exclusive drops and trading.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">8:00 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner Reservations (Choose One & Use Plan Credit):</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disneyland-park/captain-jacks-restaurant-pirates" target="_blank">Captain Jack's - Restaurant des Pirates</a></em> <span class="price-tag">(Meal Plan Credit)</span>
+                            • <em>Captain Jack's - Restaurant des Pirates</em> <span class="price-tag">(Meal Plan Credit)</span>
                         </div>
                     </div>
                 </div>
@@ -525,14 +581,14 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:30 AM</span>
-                    <div class="timeline-content"><strong>Extra Magic Time:</strong> Head to Walt Disney Studios Park early to beat the massive standby line for Crush's Coaster, then jump right into Avengers Campus.</div>
+                    <div class="timeline-content"><strong>Extra Magic Time:</strong> Head to Walt Disney Studios Park early to jump right into Avengers Campus.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">12:30 PM</span>
                     <div class="timeline-content">
                         <strong>Lunch:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/pym-kitchen/" target="_blank">PYM Kitchen</a></em> <span class="price-tag">(~€45-€50 Out of Pocket or Plan Credit)</span> - High-concept Ant-Man particle buffet inside Avengers Campus.
+                            • <em>PYM Kitchen</em> <span class="price-tag">(~€45-€50 Out of Pocket or Plan Credit)</span> - High-concept Ant-Man particle buffet.
                         </div>
                     </div>
                 </div>
@@ -541,7 +597,7 @@
                     <div class="timeline-content">
                         <strong>Dinner Reservation:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/bistrot-chez-remy/" target="_blank">Bistrot Chez Rémy</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Immersive table service where you are shrunk to the size of a rat.
+                            • <em>Bistrot Chez Rémy</em> <span class="price-tag">(Meal Plan Credit)</span> - Immersive table service where you are shrunk to the size of a rat.
                         </div>
                     </div>
                 </div>
@@ -553,14 +609,14 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:30 AM</span>
-                    <div class="timeline-content"><strong>Flex Morning:</strong> Sleep in slightly. Park hop between Disneyland Park and Walt Disney Studios to re-ride group favorites and hit anything missed.</div>
+                    <div class="timeline-content"><strong>Flex Morning:</strong> Sleep in slightly. Park hop between parks to re-ride group favorites.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">6:00 PM</span>
                     <div class="timeline-content">
                         <strong>Final Disney Dinner Options:</strong> 
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disney-village/steakhouse" target="_blank">The Steakhouse</a></em> <span class="price-tag">(Meal Plan Credit)</span> 
+                            • <em>The Steakhouse</em> <span class="price-tag">(Meal Plan Credit)</span> 
                         </div>
                     </div>
                 </div>
@@ -577,41 +633,140 @@
         <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop" alt="Loire Valley Castle" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title austin-title">Day 4 & 5: Extended London Area</div>
+            <div class="day-title austin-title">Day 4: Deep Dive London</div>
+            <div id="map-day-4" class="day-map austin-map"></div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Day 4</span>
-                    <div class="timeline-content"><strong>City Deep Dive:</strong> Move from the large group flat into a smaller, private boutique hotel in Kensington. Spend the day exploring world-class museums (V&A or British Museum).</div>
+                    <span class="time-badge">10:00 AM</span>
+                    <div class="timeline-content"><strong>Museums:</strong> Move into a smaller, private boutique hotel in Kensington. Spend the morning at the V&A or Natural History Museum.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">Day 5</span>
-                    <div class="timeline-content"><strong>Countryside Excursion:</strong> Take a train out of the city to explore the ancient Roman Baths, view Stonehenge, or walk through the Cotswolds.</div>
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>V&A Museum Café</strong> - Beautifully ornate, historic dining rooms right inside the museum.<br>
+                            • <em>Option B:</em> <strong>Dishoom Kensington</strong> - Bombay comfort food.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>The Churchill Arms</strong> - One of London's most famous flower-covered pubs (serving surprisingly great Thai food).<br>
+                            • <em>Option B:</em> <strong>Maggie Jones's</strong> - Rustic, incredibly cozy traditional British cooking.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title austin-title">Day 6 & 7: The French Loire Valley</div>
+            <div class="day-title austin-title">Day 5: Countryside Excursion</div>
+            <div id="map-day-5" class="day-map austin-map"></div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Day 6</span>
-                    <div class="timeline-content"><strong>The Cross-Channel Transit:</strong> Take the Eurostar from London directly to Paris, then immediately connect to a TGV train heading south to <strong>Tours</strong>. Check into a countryside B&B.</div>
+                    <span class="time-badge">9:00 AM</span>
+                    <div class="timeline-content"><strong>Train Out:</strong> Take a train out of the city to explore the ancient Roman Baths or view Stonehenge.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">Day 7</span>
+                    <span class="time-badge">1:00 PM</span>
                     <div class="timeline-content">
-                        <strong>Château Hopping:</strong> Spend the entire day exploring authentic, jaw-dropping French Renaissance castles like <em>Château de Chenonceau</em> and <em>Château de Chambord</em>.
+                        <strong>Lunch Options (Bath):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>The Roman Baths Kitchen</strong> - Convenient spot right next to the historic site.<br>
+                            • <em>Option B:</em> <strong>Sally Lunn's Historic Eating House</strong> - Famous for their original Bath Bunn.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options (Back in London):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>The Builders Arms</strong> - A refined, stylish Kensington pub.<br>
+                            • <em>Option B:</em> <strong>Ffiona's</strong> - Extremely welcoming, family-run British restaurant.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title austin-title">Day 6: The French Loire Valley</div>
+            <div id="map-day-6" class="day-map austin-map"></div>
+            <div class="timeline austin-timeline">
+                <div class="timeline-item">
+                    <span class="time-badge">8:30 AM</span>
+                    <div class="timeline-content"><strong>The Transit:</strong> Take the Eurostar from London to Paris, then immediately connect to a TGV train heading south to <strong>Tours</strong>.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">1:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Paul</strong> - Grab fresh baguette sandwiches at Gare Montparnasse before boarding your TGV.<br>
+                            • <em>Option B:</em> <strong>Le Machin Chouette</strong> - Grab a quick bite in Tours upon arrival before getting the rental car.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">4:00 PM</span>
+                    <div class="timeline-content"><strong>Check-In:</strong> Arrive in Amboise and check into your countryside B&B.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options (Amboise):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Restaurant La Brèche</strong> - Elegant, refined Michelin-starred dining in an 1880s bourgeois house.<br>
+                            • <em>Option B:</em> <strong>Chez Bruno</strong> - Very authentic, traditional family-style bistro.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="day-block">
-            <div class="day-title austin-title">Day 8: The Reunion in Paris</div>
+            <div class="day-title austin-title">Day 7: Château Hopping</div>
+            <div id="map-day-7" class="day-map austin-map"></div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Morning</span>
-                    <div class="timeline-content"><strong>Train to Paris:</strong> Take the quick, 1-hour high-speed train from Tours back into central Paris to reunite with the group.</div>
+                    <span class="time-badge">9:30 AM</span>
+                    <div class="timeline-content"><strong>The Castles:</strong> Spend the entire day exploring authentic, jaw-dropping French Renaissance castles like <em>Château de Chenonceau</em> and <em>Château de Chambord</em>.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">1:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Café Orangerie</strong> - Convenient cafeteria dining located right on the grounds of Chambord.<br>
+                            • <em>Option B:</em> <strong>L'Orangerie</strong> - Slightly more upscale dining on the grounds of Chenonceau.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options (Amboise):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Restaurant La Planque</strong> (formerly L'écluse) - Bucolic setting with beautiful outdoor terrace dining.<br>
+                            • <em>Option B:</em> <strong>Restaurant La Fourchette</strong> - Unique spot focusing on refined local tapas (charcuterie and Tours rillettes).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title austin-title">Day 8: Train to Paris</div>
+            <div id="map-day-8-aus" class="day-map austin-map"></div>
+            <div class="timeline austin-timeline">
+                <div class="timeline-item">
+                    <span class="time-badge">10:00 AM</span>
+                    <div class="timeline-content"><strong>Departure:</strong> Take the quick high-speed train from Tours back into central Paris to reunite with the group.</div>
                 </div>
             </div>
         </div>
@@ -623,9 +778,10 @@
         
         <div class="day-block">
             <div class="day-title">Day 8: The Reunion & Latin Quarter</div>
+            <div id="map-day-8" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Morning</span>
+                    <span class="time-badge">11:00 AM</span>
                     <div class="timeline-content"><strong>Convergence:</strong> Group of 8 takes the RER A from Disney. Austin duo takes the TGV from the Loire Valley. </div>
                 </div>
                 <div class="timeline-item">
@@ -633,11 +789,22 @@
                     <div class="timeline-content"><strong>Check-In:</strong> Entire group of 10 drops bags at the new Châtelet-Les Halles / Le Marais shared apartment.</div>
                 </div>
                 <div class="timeline-item">
+                    <span class="time-badge">1:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>L'As du Fallafel</strong> (Le Marais) - The most famous falafel in Paris, grab it to-go and eat in a nearby park.<br>
+                            • <em>Option B:</em> <strong>Café Charlot</strong> - The quintessential Parisian brasserie with tiny tables spilling out onto the street.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner Options:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.relaisentrecote.fr/" target="_blank">Le Relais de l'Entrecôte</a></em> <span class="price-tag">(~€29-€35)</span> - Fast-paced, iconic steak frites institution.
+                            • <em>Option A:</em> <strong>Le Relais de l'Entrecôte</strong> <span class="price-tag">(~€29-€35)</span> - Fast-paced, iconic steak frites institution.<br>
+                            • <em>Option B:</em> <strong>Le Coupe-Chou</strong> <span class="price-tag">(~€40-€60)</span> - Splurge on traditional beef bourguignon in a 17th-century townhouse.
                         </div>
                     </div>
                 </div>
@@ -646,40 +813,75 @@
 
         <div class="day-block">
             <div class="day-title">Day 9: Fine Art & Iconic Views</div>
+            <div id="map-day-9" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:00 AM</span>
                     <div class="timeline-content"><strong>The Masterpieces:</strong> Guided group tour of the Louvre (pre-booked to skip lines).</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">3:00 PM</span>
-                    <div class="timeline-content"><strong>Montmartre & Sacré-Cœur:</strong> Head up to the city's highest point. Explore the stunning white-domed basilica and take in panoramic afternoon views.</div>
+                    <span class="time-badge">1:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Café Marly</strong> - Upscale cafe offering direct views overlooking the Louvre Pyramid.<br>
+                            • <em>Option B:</em> <strong>Loulou Restaurant</strong> - Elegant Italian dining located right in the Musée des Arts Décoratifs.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">4:00 PM</span>
+                    <div class="timeline-content"><strong>Montmartre & Sacré-Cœur:</strong> Head up to the city's highest point to explore the stunning white-domed basilica.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">8:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Café des Arts et Métiers</strong> <span class="price-tag">(~€30-€50)</span> - Large terrace and excellent upscale comfort food.<br>
+                            • <em>Option B:</em> <strong>Brasserie Bofinger</strong> <span class="price-tag">(~€50-€80+)</span> - Splurge in a gorgeous, historic Belle Époque setting near Bastille.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
             <div class="day-title">Day 10: Icons of Paris & Seine Cruise</div>
+            <div id="map-day-10" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">8:30 AM</span>
+                    <span class="time-badge">9:00 AM</span>
                     <div class="timeline-content">
-                        <strong>Morning Option:</strong>
+                        <strong>Morning Options:</strong>
                         <div class="castle-box">
                             • <em>Option A:</em> Eiffel Tower Summit (Advance tickets mandatory).<br>
-                            • <em>Option B:</em> <strong><a href="https://en.chateauversailles.fr/" target="_blank">Palace of Versailles</a></strong> (Half-day trip via RER C train).
+                            • <em>Option B:</em> <strong>Palace of Versailles</strong> (Half-day trip via RER C train).
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">1:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Le New York</strong> - Classic bistro fare with clear views of the Eiffel Tower.<br>
+                            • <em>Option B:</em> <strong>Café de l'Homme</strong> - Upscale brasserie in the Trocadéro with panoramic skyline views.
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">4:30 PM</span>
-                    <div class="timeline-content"><strong>River Cruise:</strong> Relax legs on a glass-topped boat cruise down the River Seine.</div>
+                    <div class="timeline-content"><strong>River Cruise:</strong> Relax on a glass-topped boat cruise down the River Seine.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
-                        <strong>Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.bouillon-chartier.com/en/" target="_blank">Bouillon Chartier</a> <span class="price-tag">(~€15-€25)</span> - Legendary, loud 19th-century dining hall.</div>
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Bouillon Chartier</strong> <span class="price-tag">(~€15-€25)</span> - Legendary, loud 19th-century dining hall.<br>
+                            • <em>Option B:</em> <strong>Les Antiquaires</strong> - Elegant, vintage-chic bistro serving fantastic duck confit.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -687,6 +889,7 @@
         
         <div class="day-block">
             <div class="day-title">Day 11: Le Marais & The Underworld</div>
+            <div id="map-day-11" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10:00 AM</span>
@@ -695,8 +898,11 @@
                 <div class="timeline-item">
                     <span class="time-badge">12:30 PM</span>
                     <div class="timeline-content">
-                        <strong>Lunch:</strong>
-                        <div class="dining-box">Grab world-famous falafel from <em>L'As du Fallafel</em> in the Jewish Quarter and eat in the nearby Place des Vosges park.</div>
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Les Enfants du Marché</strong> - Incredible modern countertop spot located at the back of the Marché des Enfants Rouges.<br>
+                            • <em>Option B:</em> <strong>Breizh Café</strong> - Bustling, wood-paneled deli serving some of the best traditional Breton crêpes in the city.
+                        </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -705,7 +911,13 @@
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
-                    <div class="timeline-content"><strong>Farewell to Paris Dinner:</strong> Final celebratory dinner before heading to Switzerland tomorrow.</div>
+                    <div class="timeline-content">
+                        <strong>Farewell to Paris Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Bistrot des Tournelles</strong> - Highly trendy bistro serving classic food with modern touches in a historic setting.<br>
+                            • <em>Option B:</em> <strong>Carboni's</strong> - Amazing modern Italian restaurant right in the heart of Le Marais.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -717,28 +929,56 @@
         
         <div class="day-block">
             <div class="day-title">Day 12: High-Speed Science at CERN</div>
+            <div id="map-day-12" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:00 AM</span>
                     <div class="timeline-content"><strong>Transit:</strong> Board TGV Lyria train from Paris to Geneva.</div>
                 </div>
                 <div class="timeline-item">
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options (Geneva):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Café du Soleil</strong> - Cozy, historic spot reputed to have the best cheese fondue in Geneva.<br>
+                            • <em>Option B:</em> <strong>Buvette des Bains</strong> - Casual, scenic lakeside spot famous for its very affordable plat du jour.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
                     <span class="time-badge">2:00 PM</span>
                     <div class="timeline-content"><strong>CERN Tour:</strong> Guided above-ground tour of control rooms and antimatter factory.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Holy Cow! Gourmet Burger Co.</strong> - Fast-casual Swiss burgers using locally sourced beef.<br>
+                            • <em>Option B:</em> <strong>Luigia</strong> - Extremely popular, loud, and fun Italian spot serving fantastic pizza.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
             <div class="day-title">Day 13: Geneva to Lucerne Gateway</div>
+            <div id="map-day-13" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:00 AM</span>
                     <div class="timeline-content">
-                        <strong>Transit Options:</strong>
-                        <div class="castle-box">
-                            • <em>Option A:</em> Direct scenic SBB train straight to Lucerne.<br>
-                            • <em>Option B:</em> Route via Montreux to visit <strong><a href="https://www.chillon.ch/en/" target="_blank">Château de Chillon</a></strong> before continuing.
+                        <strong>Transit:</strong> Direct scenic SBB train straight to Lucerne.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Tibits Lucerne</strong> - High-end vegetarian buffet located conveniently in the train station.<br>
+                            • <em>Option B:</em> <strong>Wirtshaus Galliker</strong> - A cozy, family-run traditional Swiss tavern.
                         </div>
                     </div>
                 </div>
@@ -746,11 +986,22 @@
                     <span class="time-badge">4:00 PM</span>
                     <div class="timeline-content"><strong>Old Town:</strong> Walk the historic Chapel Bridge and lakeside.</div>
                 </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Stadtkeller</strong> - Lively, traditional Swiss hall with rösti, fondue, and local sausages.<br>
+                            • <em>Option B:</em> <strong>Pfistern Zunfthausrestaurant</strong> - Gorgeous historical setting offering fondue right along the river.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="day-block">
             <div class="day-title">Day 14: The Grand Alpine Finale</div>
+            <div id="map-day-14" class="day-map"></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:30 AM</span>
@@ -761,10 +1012,23 @@
                     <div class="timeline-content"><strong>The Ascent:</strong> Ride the world's steepest cogwheel railway up Mount Pilatus.</div>
                 </div>
                 <div class="timeline-item">
+                    <span class="time-badge">1:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch Options (At Summit):</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Restaurant Pilatus-Kulm</strong> - Elegant dining room at the peak with panoramic windows.<br>
+                            • <em>Option B:</em> <strong>Chalet Restaurant</strong> - Hearty self-service Swiss classics.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
                     <span class="time-badge">8:00 PM</span>
                     <div class="timeline-content">
-                        <strong>Farewell Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.balances.ch/en/restaurant" target="_blank">Restaurant Balances</a> <span class="price-tag">(~CHF 50-100+)</span> - Elegant final dinner.</div>
+                        <strong>Farewell Dinner Options:</strong>
+                        <div class="dining-box">
+                            • <em>Option A:</em> <strong>Restaurant Balances</strong> <span class="price-tag">(~CHF 50-100+)</span> - Elegant final dinner overlooking the river.<br>
+                            • <em>Option B:</em> <strong>Old Swiss House</strong> - Incredible culinary haven offering traditional dishes in a historic setting.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -775,7 +1039,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">Morning</span>
-                    <div class="timeline-content"><strong>Airport Transit:</strong> Board the direct 1-hour train from Lucerne straight into the Zurich Airport (ZRH) terminal for multi-city flights back to the US.</div>
+                    <div class="timeline-content"><strong>Airport Transit:</strong> Board the direct 1-hour train from Lucerne straight into the Zurich Airport (ZRH) terminal for flights back to the US.</div>
                 </div>
             </div>
         </div>
@@ -785,8 +1049,6 @@
     <div id="budget" class="tab-content">
         <div class="day-block">
             <div class="day-title">Estimated Split Budget (15 Days)</div>
-            <p>Estimates have been updated to reflect the two additional nights of lodging added to London and Paris.</p>
-            
             <div class="budget-header">1. Main Group Pricing (8 Travelers, Disney Route)</div>
             <div class="table-container">
                 <table>
@@ -953,7 +1215,6 @@
     <div id="booking" class="tab-content">
         <div class="day-block">
             <div class="day-title timeline-title">📅 Recommended Booking Timeline</div>
-            <p>To ensure you secure the best prices and availability for a group of 10, follow this chronological booking strategy.</p>
             
             <div class="timeline booking-timeline">
                 <div class="timeline-item">
@@ -983,38 +1244,27 @@
     <div id="lodging" class="tab-content">
         <div class="day-block">
             <div class="day-title lodging-title">🏨 Lodging Options & Date Strategy</div>
-            
-            <div class="tip-box">
-                <strong>🗓️ Date Check: 15-Day Expansion</strong>
-                By departing on May 28th/29th and flying home exactly 15 days later on June 12th, you utilize your full time window, maintain the vital "Start Day Rule" (landing on Saturday) to avoid museum closures, and add much-needed breathing room to London and Paris!
-            </div>
-
             <div class="budget-header">London: King's Cross (Days 1-3)</div>
-            <div class="castle-box">
-                • <strong>Airbnb / Vrbo Large Flats:</strong> Search specifically for listings like the <em>"Modern 4BR Kings Cross | Patio + Balcony"</em> flat on Airbnb. Securing a space with a dedicated outdoor patio is critical for 10 people to comfortably share a flat without feeling cramped ($400–$600 total/night).
-            </div>
+            <div class="castle-box">• <strong>Airbnb / Vrbo Large Flats:</strong> Search specifically for listings like the <em>"Modern 4BR Kings Cross | Patio + Balcony"</em> flat on Airbnb. </div>
 
             <div class="budget-header" style="margin-top: 20px;">Disneyland Paris (Days 4-7)</div>
-            <div class="castle-box">
-                • <strong>Disney Hotel New York - The Art of Marvel:</strong> The ultimate 4-star immersive experience. 
-            </div>
+            <div class="castle-box">• <strong>Disney Hotel New York - The Art of Marvel:</strong> The ultimate 4-star immersive experience. </div>
             
             <div class="budget-header austin-header" style="margin-top: 20px;">Austin Detour (Days 4-7)</div>
             <div class="castle-box">
-                • <strong>Kensington Boutique Hotel (London):</strong> Move to a quieter area like Kensington for Days 4-5 ($200–$300/night).<br>
-                • <strong>Loire Valley B&B (France):</strong> Base yourselves in Amboise or Tours for Days 6-7 ($150–$250/night).
+                • <strong>Kensington Boutique Hotel (London):</strong> Move to a quieter area like Kensington for Days 4-5.<br>
+                • <strong>Loire Valley B&B (France):</strong> Base yourselves in Amboise or Tours for Days 6-7.
             </div>
 
             <div class="budget-header" style="margin-top: 20px;">Central Paris: Le Marais / Châtelet (Days 8-11)</div>
-            <p>Reuniting the full group of 10 in the heart of the city.</p>
             <div class="castle-box">
-                • <strong>Airbnb / Vrbo Large Flats:</strong> Search for properties similar to the <em>"Sublim Apartment 4 chambres Paris Le Marais"</em> or the <em>"LivinParis Luxury AC 4 Bedrooms"</em> flat. <br>
-                • <strong>⚠️ Crucial Tip:</strong> Always ensure the listing explicitly states it has Air Conditioning (Climatisation). Many large historic buildings in Le Marais do not! ($500–$750 total/night).
+                • <strong>Airbnb / Vrbo Large Flats:</strong> Search for properties similar to the <em>"Sublim Apartment 4 chambres Paris Le Marais"</em>.<br>
+                • <strong>⚠️ Crucial Tip:</strong> Always ensure the listing explicitly states it has Air Conditioning (Climatisation).
             </div>
 
             <div class="budget-header" style="margin-top: 20px;">Swiss Alps (Days 12-14)</div>
             <div class="castle-box">
-                • <strong>Geneva (Day 12):</strong> <em>Hotel Cornavin</em> or <em>Warwick Geneva</em> right by the station.<br>
+                • <strong>Geneva (Day 12):</strong> <em>Hotel Cornavin</em> or <em>Warwick Geneva</em>.<br>
                 • <strong>Lucerne (Days 13-14):</strong> <em>Radisson Blu Hotel, Lucerne</em> or <em>Hotel des Balances</em>.
             </div>
         </div>
@@ -1057,16 +1307,10 @@
 <!-- Leaflet Map JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Initialize Map
-    const map = L.map('route-map', {
-        zoomControl: true,
-        scrollWheelZoom: false 
-    }).setView([47.5, 3.5], 5); 
-
+    // 1. Initialize Master Map
+    const map = L.map('route-map', { zoomControl: true, scrollWheelZoom: false }).setView([47.5, 3.5], 5); 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO', subdomains: 'abcd', maxZoom: 19
     }).addTo(map);
 
     const itinerary = [
@@ -1079,31 +1323,62 @@
         {name: "6. Zurich Airport (Departure)", coords: [47.4647, 8.5492], isAustin: false}
     ];
 
-    // Main Group Line
     const mainCoords = itinerary.filter(stop => !stop.isAustin).map(stop => stop.coords);
     L.polyline(mainCoords, { color: '#e11d48', weight: 4, dashArray: '10, 10' }).addTo(map);
 
-    // Austin Detour Line (London -> Loire -> Paris)
-    const austinCoords = [
-        itinerary[0].coords, // London
-        itinerary[2].coords, // Loire
-        itinerary[3].coords  // Paris
-    ];
+    const austinCoords = [ itinerary[0].coords, itinerary[2].coords, itinerary[3].coords ];
     L.polyline(austinCoords, { color: '#ea580c', weight: 3, dashArray: '5, 5' }).addTo(map);
 
-    // Plot markers
     itinerary.forEach(stop => {
         let markerColor = stop.isAustin ? '#ea580c' : '#1e3a8a';
-        L.circleMarker(stop.coords, {
-            radius: 6,
-            fillColor: markerColor,
-            color: '#fff',
-            weight: 2,
-            opacity: 1,
-            fillOpacity: 1
-        }).addTo(map).bindPopup(`<strong>${stop.name}</strong>`);
+        L.circleMarker(stop.coords, { radius: 6, fillColor: markerColor, color: '#fff', weight: 2, opacity: 1, fillOpacity: 1 })
+         .addTo(map).bindPopup(`<strong>${stop.name}</strong>`);
     });
 
+    // 2. Initialize Day Maps
+    const dayMapsInfo = [
+        { id: 'map-day-1', coords: [[51.5320, -0.1240], [51.4700, -0.4543]], color: '#1e3a8a' },
+        { id: 'map-day-2', coords: [[51.4839, -0.6044], [51.5081, -0.0759], [51.5117, -0.1240]], color: '#1e3a8a' },
+        { id: 'map-day-3', coords: [[51.5055, -0.0905], [51.4981, -0.0782]], color: '#1e3a8a' },
+        { id: 'map-day-4', coords: [[51.4966, -0.1722], [51.5015, -0.1910]], color: '#ea580c' },
+        { id: 'map-day-5', coords: [[51.3811, -2.3590], [51.1789, -1.8262]], color: '#ea580c' },
+        { id: 'map-day-6', coords: [[48.8412, 2.3197], [47.4125, 0.9833]], color: '#ea580c' },
+        { id: 'map-day-7', coords: [[47.6161, 1.5172], [47.3329, 1.0700]], color: '#ea580c' },
+        { id: 'map-day-8-aus', coords: [[47.4125, 0.9833], [48.8624, 2.3470]], color: '#ea580c' },
+        { id: 'map-day-8', coords: [[48.8624, 2.3470]], color: '#1e3a8a' },
+        { id: 'map-day-9', coords: [[48.8606, 2.3376], [48.8867, 2.3431]], color: '#1e3a8a' },
+        { id: 'map-day-10', coords: [[48.8584, 2.2945], [48.8014, 2.1204]], color: '#1e3a8a' },
+        { id: 'map-day-11', coords: [[48.8338, 2.3324], [48.8575, 2.3614]], color: '#1e3a8a' },
+        { id: 'map-day-12', coords: [[46.2044, 6.1432], [46.2330, 6.0557]], color: '#1e3a8a' },
+        { id: 'map-day-13', coords: [[46.2044, 6.1432], [47.0502, 8.3093]], color: '#1e3a8a' },
+        { id: 'map-day-14', coords: [[47.0502, 8.3093], [46.9795, 8.2562]], color: '#1e3a8a' }
+    ];
+
+    const instantiatedDayMaps = [];
+
+    // Delay initialization slightly so DOM is completely parsed
+    setTimeout(() => {
+        dayMapsInfo.forEach(info => {
+            const el = document.getElementById(info.id);
+            if (el) {
+                const m = L.map(info.id, {zoomControl: false, scrollWheelZoom: false});
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(m);
+                
+                const group = L.featureGroup();
+                info.coords.forEach(c => {
+                    const marker = L.circleMarker(c, {
+                        radius: 7, fillColor: info.color, color: '#fff', weight: 2, opacity: 1, fillOpacity: 1
+                    });
+                    group.addLayer(marker);
+                });
+                group.addTo(m);
+                
+                instantiatedDayMaps.push({ map: m, group: group, coords: info.coords });
+            }
+        });
+    }, 500);
+
+    // 3. Tab Switching Logic (and Map Invalidation)
     function switchTab(evt, tabId) {
         const content = document.getElementsByClassName("tab-content");
         for (let i = 0; i < content.length; i++) {
@@ -1117,9 +1392,20 @@
 
         document.getElementById(tabId).classList.add("active");
         evt.currentTarget.classList.add("active");
+
+        // Force Leaflet to recalculate size when tab becomes visible
+        setTimeout(() => {
+            instantiatedDayMaps.forEach(obj => {
+                obj.map.invalidateSize();
+                if (obj.coords.length > 1) {
+                    obj.map.fitBounds(obj.group.getBounds(), {padding: [30, 30]});
+                } else {
+                    obj.map.setView(obj.coords[0], 14);
+                }
+            });
+        }, 150);
     }
 </script>
 
 </body>
 </html>
-
