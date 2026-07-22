@@ -21,6 +21,7 @@
             --appendix: #475569;
             --lodging: #0284c7;
             --packing: #b45309;
+            --flight: #0ea5e9;
         }
         
         * {
@@ -141,6 +142,12 @@
             background-color: var(--packing);
             border-color: var(--packing);
         }
+        
+        .tab-btn.flight-btn.active {
+            background-color: var(--flight);
+            border-color: var(--flight);
+            color: white;
+        }
 
         .tab-content {
             display: none;
@@ -179,35 +186,13 @@
             padding-bottom: 5px;
         }
         
-        .austin-title {
-            color: var(--austin);
-            border-bottom: 2px solid var(--austin);
-        }
-        
-        .rsvlts-title {
-            color: var(--rsvlts);
-            border-bottom: 2px solid var(--rsvlts);
-        }
-        
-        .timeline-title {
-            color: var(--timeline);
-            border-bottom: 2px solid var(--timeline);
-        }
-
-        .appendix-title {
-            color: var(--appendix);
-            border-bottom: 2px solid var(--appendix);
-        }
-        
-        .lodging-title {
-            color: var(--lodging);
-            border-bottom: 2px solid var(--lodging);
-        }
-        
-        .packing-title {
-            color: var(--packing);
-            border-bottom: 2px solid var(--packing);
-        }
+        .austin-title { color: var(--austin); border-bottom: 2px solid var(--austin); }
+        .rsvlts-title { color: var(--rsvlts); border-bottom: 2px solid var(--rsvlts); }
+        .timeline-title { color: var(--timeline); border-bottom: 2px solid var(--timeline); }
+        .appendix-title { color: var(--appendix); border-bottom: 2px solid var(--appendix); }
+        .lodging-title { color: var(--lodging); border-bottom: 2px solid var(--lodging); }
+        .packing-title { color: var(--packing); border-bottom: 2px solid var(--packing); }
+        .flight-title { color: var(--flight); border-bottom: 2px solid var(--flight); }
 
         /* Day Map Styling */
         .day-map {
@@ -254,14 +239,9 @@
             border: 2px solid white;
             box-shadow: 0 0 0 2px var(--accent);
         }
-        .austin-timeline .timeline-item::before {
-            background: var(--austin);
-            box-shadow: 0 0 0 2px var(--austin);
-        }
-        .booking-timeline .timeline-item::before {
-            background: var(--timeline);
-            box-shadow: 0 0 0 2px var(--timeline);
-        }
+        .austin-timeline .timeline-item::before { background: var(--austin); box-shadow: 0 0 0 2px var(--austin); }
+        .booking-timeline .timeline-item::before { background: var(--timeline); box-shadow: 0 0 0 2px var(--timeline); }
+        
         .time-badge {
             font-weight: 700;
             color: var(--primary);
@@ -271,51 +251,25 @@
             vertical-align: top;
             margin-top: 2px;
         }
-        .austin-timeline .time-badge {
-            color: var(--austin);
-        }
-        .booking-timeline .time-badge {
-            color: var(--timeline);
-            min-width: 140px;
-        }
-        .timeline-content {
-            display: inline-block;
-            width: calc(100% - 100px);
-            vertical-align: top;
-        }
-        .booking-timeline .timeline-content {
-            width: calc(100% - 150px);
-        }
+        .austin-timeline .time-badge { color: var(--austin); }
+        .booking-timeline .time-badge { color: var(--timeline); min-width: 140px; }
+        .flight-badge { font-weight: 700; color: white; background: var(--flight); padding: 4px 10px; border-radius: 12px; display: inline-block; font-size: 0.85rem; margin-bottom: 8px; }
+        
+        .timeline-content { display: inline-block; width: calc(100% - 100px); vertical-align: top; }
+        .booking-timeline .timeline-content { width: calc(100% - 150px); }
 
-        .dining-box {
-            background: #fff7ed;
-            border-left: 4px solid #ea580c;
-            padding: 10px 15px;
-            margin-top: 8px;
-            border-radius: 0 4px 4px 0;
-            font-size: 0.9rem;
-        }
+        .dining-box { background: #fff7ed; border-left: 4px solid #ea580c; padding: 10px 15px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; }
         .dining-box strong { color: #c2410c; }
         .price-tag { color: #0f766e; font-weight: bold; font-size: 0.85rem; }
         
-        .castle-box {
-            background: #f8fafc;
-            border-left: 4px solid #64748b;
-            padding: 10px 15px;
-            margin-top: 8px;
-            border-radius: 0 4px 4px 0;
-            font-size: 0.9rem;
-        }
+        .castle-box { background: #f8fafc; border-left: 4px solid #64748b; padding: 10px 15px; margin-top: 8px; border-radius: 0 4px 4px 0; font-size: 0.9rem; }
         .castle-box strong { color: #334155; }
 
-        .tip-box {
-            background: #f1f5f9;
-            border-left: 4px solid var(--appendix);
-            padding: 12px 18px;
-            margin-bottom: 12px;
-            border-radius: 0 4px 4px 0;
-            font-size: 0.95rem;
-        }
+        .flight-box { background: #f0f9ff; border-left: 4px solid var(--flight); padding: 15px; margin-top: 10px; margin-bottom: 15px; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+        .flight-box strong { color: #0369a1; }
+        .flight-route { font-family: monospace; font-size: 1.1rem; color: #0f172a; margin: 8px 0; background: white; padding: 5px 10px; border-radius: 4px; border: 1px solid #bae6fd; display: inline-block; }
+
+        .tip-box { background: #f1f5f9; border-left: 4px solid var(--appendix); padding: 12px 18px; margin-bottom: 12px; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
         .tip-box strong { color: var(--appendix); display: block; margin-bottom: 4px; font-size: 1rem; }
         
         a { color: #0284c7; text-decoration: none; font-weight: bold; }
@@ -394,8 +348,8 @@
         <button class="tab-btn rsvlts-btn" onclick="switchTab(event, 'rsvlts')">👔 7. Joe & Mike's Fits</button>
         <button class="tab-btn timeline-btn" onclick="switchTab(event, 'booking')">📅 8. Booking Timeline</button>
         <button class="tab-btn lodging-btn" onclick="switchTab(event, 'lodging')">🏨 9. Lodging</button>
-        <button class="tab-btn appendix-btn" onclick="switchTab(event, 'appendix')">📌 10. Appendix & Tips</button>
-        <button class="tab-btn packing-btn" onclick="switchTab(event, 'packing')">🧳 11. Packing List</button>
+        <button class="tab-btn packing-btn" onclick="switchTab(event, 'packing')">🧳 10. Packing List</button>
+        <button class="tab-btn flight-btn" onclick="switchTab(event, 'flights')">✈️ 11. Example Flights</button>
     </div>
 
     <!-- London Content (All 10) -->
@@ -408,7 +362,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10:00 AM</span>
-                    <div class="timeline-content"><strong>Group Arrivals:</strong> Flights land at LHR. Group meets at designated terminal and takes the Tube/Express to King's Cross.</div>
+                    <div class="timeline-content"><strong>Group Arrivals:</strong> Flights land at LHR or LGW. Group meets at designated terminal and takes the Tube or Thameslink to King's Cross.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">12:30 PM</span>
@@ -1325,7 +1279,6 @@
     <div id="packing" class="tab-content">
         <div class="day-block">
             <div class="day-title packing-title">🧳 Ultimate 15-Day Packing Recommendations</div>
-            <p>Late May and early June in Europe means unpredictable weather. London will be breezy and potentially rainy, Paris can swing from hot and humid to chilly, and the Swiss Alps will require warm layers. Here is what you absolutely must pack for a smooth 15-day group trip.</p>
             
             <div class="packing-grid">
                 <!-- Gadgets & Electronics -->
@@ -1372,6 +1325,64 @@
                         <li><strong>Travel Medical Kit:</strong> Blister pads, ibuprofen, and any daily prescriptions.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Flights Content -->
+    <div id="flights" class="tab-content">
+        <div class="day-block">
+            <div class="day-title flight-title">✈️ Example "Multi-City" Flight Routings</div>
+            
+            <div class="tip-box">
+                <strong>💡 The Gatwick Upgrade</strong>
+                While Heathrow (LHR) is the famous hub, flying into London Gatwick (LGW) is actually an incredibly smart move for your specific itinerary. The <strong>Thameslink train</strong> runs straight from the LGW terminal directly into St Pancras International (right next to your King's Cross flats) in about 45 minutes, with zero transfers needed!
+            </div>
+
+            <p>Because the group is originating from four different cities, everyone will need to book a <strong>Multi-City</strong> (or "Open-Jaw") ticket. This means flying into London (LHR or LGW) and flying out of Zurich (ZRH). Here are realistic examples based on typical Oneworld and Star Alliance airline schedules:</p>
+            
+            <div class="budget-header" style="margin-top: 25px;">The Midwest Crew (Out of XNA & TUL)</div>
+            <p>Travelers from Northwest Arkansas and Tulsa will usually find the easiest routing through Dallas (DFW) or Chicago (ORD).</p>
+            <div class="flight-box">
+                <strong>Oneworld Route Example (American Airlines / British Airways)</strong><br>
+                <span class="flight-badge">Outbound</span><br>
+                <span class="flight-route">XNA or TUL ➔ DFW ➔ LHR (London)</span><br>
+                <span class="flight-badge" style="background: #e11d48;">Return</span><br>
+                <span class="flight-route">ZRH (Zurich) ➔ LHR ➔ DFW ➔ XNA or TUL</span><br>
+                <em style="font-size: 0.85rem; color: #475569;">*The return connects back through London on British Airways before crossing the Atlantic on AA.</em>
+            </div>
+
+            <div class="budget-header austin-header" style="margin-top: 25px;">The Texas Duo (Out of AUS)</div>
+            <p>Austin has fantastic direct flights to London, meaning the outbound journey is a breeze.</p>
+            <div class="flight-box" style="border-left-color: var(--austin); background: #fff7ed;">
+                <strong>Direct Outbound / 1-Stop Return (British Airways / Lufthansa / AA)</strong><br>
+                <span class="flight-badge" style="background: var(--austin);">Outbound</span><br>
+                <span class="flight-route">AUS ➔ LHR (Direct 9-Hour Flight)</span><br>
+                <span class="flight-badge" style="background: #e11d48;">Return</span><br>
+                <span class="flight-route">ZRH (Zurich) ➔ LHR (or FRA) ➔ AUS</span><br>
+                <em style="font-size: 0.85rem; color: #475569;">*British Airways and Virgin Atlantic run highly competitive direct flights from Austin to London.</em>
+            </div>
+
+            <div class="budget-header" style="margin-top: 25px; color: #0284c7;">The Florida Crew (Out of MCO)</div>
+            <p>Orlando is a massive hub for UK tourists, giving you great, direct, and often budget-friendly flight options.</p>
+            <div class="flight-box">
+                <strong>Direct Outbound / 1-Stop Return (British Airways / Virgin / Norse)</strong><br>
+                <span class="flight-badge">Outbound</span><br>
+                <span class="flight-route">MCO ➔ LGW or LHR (Direct 8-Hour Flight)</span><br>
+                <span class="flight-badge" style="background: #e11d48;">Return</span><br>
+                <span class="flight-route">ZRH (Zurich) ➔ EWR or LHR ➔ MCO</span><br>
+                <em style="font-size: 0.85rem; color: #475569;">*MCO often has direct flights straight into Gatwick (LGW), which connects perfectly to the St Pancras flat.</em>
+            </div>
+            
+            <div class="budget-header" style="margin-top: 25px; color: #059669;">The "Star Alliance" Alternative (United / Swiss)</div>
+            <p>If anyone opens a Chase Sapphire card or United Explorer card for points, Star Alliance is a powerful option for this exact route because Swiss International Air Lines (a United partner) is based in Zurich.</p>
+            <div class="flight-box" style="border-left-color: #059669; background: #ecfdf5;">
+                <strong>United & Swiss Air Example (Great for ZRH Departure)</strong><br>
+                <span class="flight-badge" style="background: #059669;">Outbound</span><br>
+                <span class="flight-route">US Origin ➔ EWR / IAD / ORD ➔ LHR</span><br>
+                <span class="flight-badge" style="background: #e11d48;">Return</span><br>
+                <span class="flight-route">ZRH (Zurich) ➔ EWR / IAD / ORD ➔ US Origin</span><br>
+                <em style="font-size: 0.85rem; color: #475569;">*Swiss Air runs direct flights from Zurich to Chicago (ORD), Newark (EWR), and Washington Dulles (IAD), making the trip back to the states incredibly smooth.</em>
             </div>
         </div>
     </div>
