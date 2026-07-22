@@ -19,6 +19,7 @@
             --rsvlts: #8b5cf6;
             --timeline: #059669;
             --appendix: #475569;
+            --lodging: #0284c7;
         }
         
         * {
@@ -129,6 +130,11 @@
             background-color: var(--appendix);
             border-color: var(--appendix);
         }
+        
+        .tab-btn.lodging-btn.active {
+            background-color: var(--lodging);
+            border-color: var(--lodging);
+        }
 
         .tab-content {
             display: none;
@@ -186,8 +192,12 @@
             color: var(--appendix);
             border-bottom: 2px solid var(--appendix);
         }
+        
+        .lodging-title {
+            color: var(--lodging);
+            border-bottom: 2px solid var(--lodging);
+        }
 
-        /* Timeline Styles */
         .timeline {
             position: relative;
             padding-left: 20px;
@@ -319,7 +329,7 @@
 <div class="container">
     <header>
         <h1>Grand European Tour 2027</h1>
-        <p>13 Days | 10 Travelers | 4 Destinations (Plus an Austin Detour)</p>
+        <p>15 Days | 10 Travelers | 4 Destinations (Plus an Austin Detour)</p>
     </header>
 
     <div id="route-map"></div>
@@ -328,17 +338,17 @@
         <div class="card">
             <h3>👥 Main Group (8 Travelers)</h3>
             <p><strong>Focus:</strong> Theme Parks & Science</p>
-            <p><strong>Route:</strong> London (2 Days) ➔ Disney (4 Days) ➔ Central Paris (3 Days) ➔ Swiss Alps (3 Days).</p>
+            <p><strong>Route:</strong> London (3 Days) ➔ Disney (4 Days) ➔ Central Paris (4 Days) ➔ Swiss Alps (4 Days).</p>
         </div>
         <div class="card austin-card">
             <h3>🤠 Austin Duo (2 Travelers)</h3>
             <p><strong>Focus:</strong> Countryside & Castles</p>
-            <p><strong>Route:</strong> London (4 Days) ➔ French Loire Valley (2 Days) ➔ Central Paris (3 Days) ➔ Swiss Alps (3 Days).</p>
+            <p><strong>Route:</strong> London (5 Days) ➔ French Loire Valley (2 Days) ➔ Central Paris (4 Days) ➔ Swiss Alps (4 Days).</p>
         </div>
         <div class="card">
             <h3>🏨 Shared Logistics</h3>
-            <p>• All 10 travelers stay together in a massive flat for Days 1-2 (London).</p>
-            <p>• All 10 travelers reunite at a shared flat for Days 7-9 (Central Paris) and remain together through the Swiss Alps.</p>
+            <p>• All 10 travelers stay together in a massive flat for Days 1-3 (London).</p>
+            <p>• All 10 travelers reunite at a shared flat for Days 8-11 (Central Paris) and remain together through the Swiss Alps.</p>
         </div>
     </div>
 
@@ -351,7 +361,8 @@
         <button class="tab-btn" onclick="switchTab(event, 'budget')">💰 6. Split Budget</button>
         <button class="tab-btn rsvlts-btn" onclick="switchTab(event, 'rsvlts')">👔 7. Joe & Mike's Fits</button>
         <button class="tab-btn timeline-btn" onclick="switchTab(event, 'booking')">📅 8. Booking Timeline</button>
-        <button class="tab-btn appendix-btn" onclick="switchTab(event, 'appendix')">📌 9. Appendix & Tips</button>
+        <button class="tab-btn lodging-btn" onclick="switchTab(event, 'lodging')">🏨 9. Lodging</button>
+        <button class="tab-btn appendix-btn" onclick="switchTab(event, 'appendix')">📌 10. Appendix & Tips</button>
     </div>
 
     <!-- London Content (All 10) -->
@@ -363,7 +374,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10:00 AM</span>
-                    <div class="timeline-content"><strong>Group Arrivals:</strong> Flights from XNA, TUL, AUS, and MCO land at LHR. Group meets at designated terminal and takes the Tube/Express to King's Cross.</div>
+                    <div class="timeline-content"><strong>Group Arrivals:</strong> Flights land at LHR. Group meets at designated terminal and takes the Tube/Express to King's Cross.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">2:00 PM</span>
@@ -376,7 +387,7 @@
                         <div class="castle-box">
                             • <em>Option A:</em> Rest at the flat and unpack.<br>
                             • <em>Option B:</em> Head down to the river for a light, pedestrian-friendly walk along the South Bank to see Big Ben and the London Eye.<br>
-                            • <em>Option C (Nerd Pilgrimage):</em> Take the Tube out to Chiswick for a quick photo-op outside the iconic gates of the <strong>Taskmaster House</strong> (Note: This is a working TV set and private property, so this is strictly a quick selfie-over-the-fence detour for die-hard fans!).
+                            • <em>Option C (Nerd Pilgrimage):</em> Take the Tube out to Chiswick for a quick photo-op outside the iconic gates of the <strong>Taskmaster House</strong>.
                         </div>
                     </div>
                 </div>
@@ -385,9 +396,7 @@
                     <div class="timeline-content">
                         <strong>Dinner & Pints Option:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.parcelyard.co.uk/" target="_blank">The Parcel Yard</a></em> <span class="price-tag">(~£15-£25)</span> - Closest, right in King's Cross station.<br>
-                            • <em><a href="https://www.greeneking.co.uk/pubs/greater-london/royal-george" target="_blank">The Royal George</a></em> <span class="price-tag">(~£15-£20)</span> - Casual pub, big TVs.<br>
-                            • <em><a href="https://www.greeneking.co.uk/pubs/greater-london/george-southwark" target="_blank">The George Inn</a></em> <span class="price-tag">(~£15-£25)</span> - Historic courtyard, if down by the river.
+                            • <em><a href="https://www.parcelyard.co.uk/" target="_blank">The Parcel Yard</a></em> <span class="price-tag">(~£15-£25)</span> - Closest, right in King's Cross station.
                         </div>
                     </div>
                 </div>
@@ -416,19 +425,42 @@
                     <div class="timeline-content"><strong>Lunch:</strong> Return to the city center. Grab casual bites in Covent Garden piazza.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">3:00 PM</span>
-                    <div class="timeline-content"><strong>Free Time:</strong> Explore the West End, shop, or head back to the flat to change for the evening.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">5:30 PM</span>
                     <div class="timeline-content">
                         <strong>Pre-Theater Dinner:</strong> 
-                        <div class="dining-box"><a href="https://www.dishoom.com/covent-garden/" target="_blank">Dishoom (Covent Garden)</a> <span class="price-tag">(~£25-£40)</span> - High-energy Bombay cafe, perfect for a large group feast before the show.</div>
+                        <div class="dining-box"><a href="https://www.dishoom.com/covent-garden/" target="_blank">Dishoom (Covent Garden)</a> <span class="price-tag">(~£25-£40)</span> - High-energy Bombay cafe.</div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content"><strong>Showtime:</strong> See <em>Hamilton</em> at the Victoria Palace Theatre.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-title">Day 3: Markets & The Thames Path (Entire Group)</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="time-badge">10:00 AM</span>
+                    <div class="timeline-content"><strong>Borough Market:</strong> Head to London's most famous food market. Graze on fresh sausage rolls, artisanal cheeses, and strawberries for a massive roaming lunch.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">1:00 PM</span>
+                    <div class="timeline-content"><strong>Thames Walk:</strong> Walk along the river from the market to view the iconic Tower Bridge and the HMS Belfast.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">3:00 PM</span>
+                    <div class="timeline-content">
+                        <strong>Afternoon Pints:</strong> 
+                        <div class="castle-box">
+                            • <em>Bermondsey Beer Mile:</em> Walk down this legendary stretch of railway arches housing some of London's best independent craft taprooms (perfect for any brewery fans in the group).
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:00 PM</span>
+                    <div class="timeline-content"><strong>Dinner:</strong> Grab proper Fish & Chips at a local pub in Southwark before heading back to pack for tomorrow's split!</div>
                 </div>
             </div>
         </div>
@@ -439,7 +471,7 @@
         <img src="https://images.unsplash.com/photo-1543158097-47000305f6e5?q=80&w=1200&auto=format&fit=crop" alt="Disney Castle" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title">Day 3: The Split & Disney Arrival (Group of 8)</div>
+            <div class="day-title">Day 4: The Split & Disney Arrival (Group of 8)</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:00 AM</span>
@@ -454,16 +486,11 @@
                     <div class="timeline-content"><strong>Check-In:</strong> Arrive at gates. Drop bags at <em>Disney Hotel New York – The Art of Marvel</em>.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">2:30 PM</span>
-                    <div class="timeline-content"><strong>Park Entry:</strong> First afternoon session in Disneyland Park or Walt Disney Studios.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
                         <strong>Group Dinner:</strong> 
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/disney-hotel-new-york-the-art-of-marvel/downtown-restaurant/" target="_blank">Downtown Restaurant</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Massive Marvel-themed buffet located right in your hotel, covered by your Half-Board Plus plan.<br>
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disney-village/sports-bar/" target="_blank">Sports Bar</a></em> <span class="price-tag">(~€15-€25 Out of Pocket)</span> - Alternately, visit the Village for a casual pub bite.
+                            • <em><a href="https://www.disneylandparis.com/en-us/dining/disney-hotel-new-york-the-art-of-marvel/downtown-restaurant/" target="_blank">Downtown Restaurant</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Massive Marvel-themed buffet located right in your hotel.
                         </div>
                     </div>
                 </div>
@@ -471,44 +498,22 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 4: Classic Park Deep Dive (Group of 8)</div>
+            <div class="day-title">Day 5: Classic Park Deep Dive (Group of 8)</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:30 AM</span>
-                    <div class="timeline-content"><strong>Extra Magic Time:</strong> Enter Disneyland Park early via the hotel perk. Focus on Fantasyland and Discoveryland before the general crowds arrive.</div>
+                    <div class="timeline-content"><strong>Extra Magic Time:</strong> Enter Disneyland Park early via the hotel perk. </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">11:00 AM</span>
-                    <div class="timeline-content"><strong>Pin Trading:</strong> Head to <strong>Pueblo Trading Post</strong> in Frontierland for daily Euro-exclusive drops and trading. Keep an eye out for any rare Lilo umbrella, Sorcerer Mickey kite, or hot air balloon pins to add to the collection!</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">12:00 PM</span>
-                    <div class="timeline-content"><strong>Grooming Break:</strong> Step back in time for a traditional haircut or close shave at <strong>Dapper Dan's Hair Cuts</strong>, an authentic old-fashioned barbershop located right on Main Street, U.S.A.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">1:30 PM</span>
-                    <div class="timeline-content">
-                        <strong>Lunch:</strong>
-                        <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/disneyland-park/casa-de-coco-restaurante-de-familia/" target="_blank">Casa de Coco</a></em> <span class="price-tag">(~€15-€20 Out of Pocket)</span> - Grab quick-service spicy Tex-Mex bowls in Frontierland.
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">2:30 PM</span>
-                    <div class="timeline-content"><strong>Hidden Secrets:</strong> Explore <em>La Tanière du Dragon</em> (The Dragon's Lair) to view the massive, incredibly detailed animatronic dragon sleeping directly beneath Sleeping Beauty Castle.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">5:30 PM</span>
-                    <div class="timeline-content"><strong>Parade & Rides:</strong> Catch the afternoon parade route and hit any remaining major roller coasters.</div>
+                    <div class="timeline-content"><strong>Pin Trading:</strong> Head to <strong>Pueblo Trading Post</strong> in Frontierland for daily Euro-exclusive drops and trading. Keep an eye out for rare sets!</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">8:00 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner Reservations (Choose One & Use Plan Credit):</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disneyland-park/captain-jacks-restaurant-pirates" target="_blank">Captain Jack's - Restaurant des Pirates</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Highly immersive dining right inside the Pirates of the Caribbean ride.<br>
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disneyland-park/silver-spur-steakhouse" target="_blank">Silver Spur Steakhouse</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Elegant western-style open grill located right in Thunder Mesa.
+                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disneyland-park/captain-jacks-restaurant-pirates" target="_blank">Captain Jack's - Restaurant des Pirates</a></em> <span class="price-tag">(Meal Plan Credit)</span>
                         </div>
                     </div>
                 </div>
@@ -516,40 +521,27 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 5: Walt Disney Studios & Marvel (Group of 8)</div>
+            <div class="day-title">Day 6: Walt Disney Studios & Marvel (Group of 8)</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:30 AM</span>
                     <div class="timeline-content"><strong>Extra Magic Time:</strong> Head to Walt Disney Studios Park early to beat the massive standby line for Crush's Coaster, then jump right into Avengers Campus.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">10:30 AM</span>
-                    <div class="timeline-content"><strong>Interactive Show:</strong> Catch a late-morning showing of <strong>Stitch Live!</strong> for some interactive, family-friendly alien comedy.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">12:30 PM</span>
                     <div class="timeline-content">
                         <strong>Lunch:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/pym-kitchen/" target="_blank">PYM Kitchen</a></em> <span class="price-tag">(~€45-€50 Out of Pocket or Plan Credit)</span> - High-concept Ant-Man particle buffet inside Avengers Campus.<br>
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/stark-factory/" target="_blank">Stark Factory</a></em> <span class="price-tag">(~€15-€20 Out of Pocket)</span> - Quick-service pizza or pasta among high-tech Iron Man gear.
+                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/pym-kitchen/" target="_blank">PYM Kitchen</a></em> <span class="price-tag">(~€45-€50 Out of Pocket or Plan Credit)</span> - High-concept Ant-Man particle buffet inside Avengers Campus.
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">2:00 PM</span>
-                    <div class="timeline-content"><strong>Studio Tours & Animation:</strong> Ride the Studio Tram Tour / Cars ROAD TRIP or take a break in the Animation Academy.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">4:30 PM</span>
-                    <div class="timeline-content"><strong>Mid-Day Break:</strong> Since it's a longer day, take a short walk back to the Marvel Hotel rooms to recharge.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner Reservation:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/bistrot-chez-remy/" target="_blank">Bistrot Chez Rémy</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Immersive table service where you are shrunk to the size of a rat. A must-do experience for the group (Use dining plan credit).
+                            • <em><a href="https://www.disneylandparis.com/en-us/dining/walt-disney-studios-park/bistrot-chez-remy/" target="_blank">Bistrot Chez Rémy</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Immersive table service where you are shrunk to the size of a rat.
                         </div>
                     </div>
                 </div>
@@ -557,42 +549,24 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 6: Park Hopping & Spectaculars (Group of 8)</div>
+            <div class="day-title">Day 7: Park Hopping & Spectaculars (Group of 8)</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:30 AM</span>
                     <div class="timeline-content"><strong>Flex Morning:</strong> Sleep in slightly. Park hop between Disneyland Park and Walt Disney Studios to re-ride group favorites and hit anything missed.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">11:30 AM</span>
-                    <div class="timeline-content"><strong>Village Shopping:</strong> Last chance to hit World of Disney in the Village to scour the pin trading lanyards and grab exclusive Euro-merchandise before heading to central Paris tomorrow.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">1:00 PM</span>
-                    <div class="timeline-content">
-                        <strong>Lunch:</strong>
-                        <div class="dining-box">
-                            • <em>Toad Hall Restaurant</em> <span class="price-tag">(~€15-€20 Out of Pocket)</span> - Excellent quick-service British fish and chips in Fantasyland.
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">4:00 PM</span>
-                    <div class="timeline-content"><strong>Pack & Prep:</strong> Head back to the hotel to organize bags for tomorrow's check-out and train transfer into the city.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">6:00 PM</span>
                     <div class="timeline-content">
                         <strong>Final Disney Dinner Options:</strong> 
                         <div class="dining-box">
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disney-village/steakhouse" target="_blank">The Steakhouse</a></em> <span class="price-tag">(Meal Plan Credit)</span> - High-class 1950s Chicago meatpacking theme in Disney Village using your final night's meal credit.<br>
-                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disney-village/annettes-diner" target="_blank">Annette's Diner</a></em> <span class="price-tag">(Meal Plan Credit)</span> - Retro rock 'n' roll diner option with roller-skating staff.
+                            • <em><a href="https://www.disneylandparis.com/en-gb/dining/disney-village/steakhouse" target="_blank">The Steakhouse</a></em> <span class="price-tag">(Meal Plan Credit)</span> 
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">9:00 PM</span>
-                    <div class="timeline-content"><strong>The Grand Finale:</strong> Secure a spot on Main Street for Disney Illuminations, the massive castle projection and fireworks spectacular to close out the Disney leg of the trip.</div>
+                    <div class="timeline-content"><strong>The Grand Finale:</strong> Secure a spot on Main Street for Disney Illuminations fireworks.</div>
                 </div>
             </div>
         </div>
@@ -603,53 +577,41 @@
         <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop" alt="Loire Valley Castle" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title austin-title">Day 3 & 4: Extended London Area</div>
+            <div class="day-title austin-title">Day 4 & 5: Extended London Area</div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Day 3</span>
-                    <div class="timeline-content"><strong>City Deep Dive:</strong> Move from the large group flat into a smaller, private boutique hotel in Kensington. Spend the day exploring world-class museums (V&A or British Museum) or eating through Borough Market.</div>
+                    <span class="time-badge">Day 4</span>
+                    <div class="timeline-content"><strong>City Deep Dive:</strong> Move from the large group flat into a smaller, private boutique hotel in Kensington. Spend the day exploring world-class museums (V&A or British Museum).</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">Day 4</span>
-                    <div class="timeline-content"><strong>Countryside Excursion:</strong> Take a train out of the city. Options include exploring the ancient Roman Baths in the city of Bath, viewing Stonehenge, or walking through the picturesque villages of the Cotswolds.</div>
+                    <span class="time-badge">Day 5</span>
+                    <div class="timeline-content"><strong>Countryside Excursion:</strong> Take a train out of the city to explore the ancient Roman Baths, view Stonehenge, or walk through the Cotswolds.</div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title austin-title">Day 5 & 6: The French Loire Valley</div>
+            <div class="day-title austin-title">Day 6 & 7: The French Loire Valley</div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
-                    <span class="time-badge">Day 5 (A.M.)</span>
-                    <div class="timeline-content"><strong>The Cross-Channel Transit:</strong> Take the Eurostar from London directly to Paris Gare du Nord, then immediately connect to a TGV train heading south to <strong>Tours</strong> (approx 4 hours total travel).</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">Day 5 (P.M.)</span>
-                    <div class="timeline-content"><strong>Check-In:</strong> Arrive in the Loire Valley (the historical garden and castle region of France). Rent a car or use local transit to check into a countryside B&B. Relax with local wine and French countryside cuisine.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">Day 6</span>
+                    <div class="timeline-content"><strong>The Cross-Channel Transit:</strong> Take the Eurostar from London directly to Paris, then immediately connect to a TGV train heading south to <strong>Tours</strong>. Check into a countryside B&B.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">Day 7</span>
                     <div class="timeline-content">
-                        <strong>Château Hopping:</strong> Spend the entire day exploring authentic, jaw-dropping French Renaissance castles.
-                        <div class="castle-box">
-                            • <em><a href="https://www.chenonceau.com/en/" target="_blank">Château de Chenonceau</a>:</em> The stunning castle built directly over the River Cher.<br>
-                            • <em><a href="https://www.chambord.org/en/" target="_blank">Château de Chambord</a>:</em> The massive, iconic royal hunting lodge with its famous double-helix staircase.
-                        </div>
+                        <strong>Château Hopping:</strong> Spend the entire day exploring authentic, jaw-dropping French Renaissance castles like <em>Château de Chenonceau</em> and <em>Château de Chambord</em>.
                     </div>
                 </div>
             </div>
         </div>
         
         <div class="day-block">
-            <div class="day-title austin-title">Day 7: The Reunion in Paris</div>
+            <div class="day-title austin-title">Day 8: The Reunion in Paris</div>
             <div class="timeline austin-timeline">
                 <div class="timeline-item">
                     <span class="time-badge">Morning</span>
-                    <div class="timeline-content"><strong>Train to Paris:</strong> Take the quick, 1-hour high-speed train from Tours back into central Paris.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">Afternoon</span>
-                    <div class="timeline-content"><strong>Reunion:</strong> Arrive at the new shared apartment in Châtelet-Les Halles to meet the rest of the group arriving from Disneyland Paris. The 10-person itinerary resumes from here!</div>
+                    <div class="timeline-content"><strong>Train to Paris:</strong> Take the quick, 1-hour high-speed train from Tours back into central Paris to reunite with the group.</div>
                 </div>
             </div>
         </div>
@@ -660,7 +622,7 @@
         <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop" alt="Paris Seine and Eiffel Tower" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title">Day 7: The Reunion & Latin Quarter</div>
+            <div class="day-title">Day 8: The Reunion & Latin Quarter</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">Morning</span>
@@ -668,25 +630,14 @@
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">12:30 PM</span>
-                    <div class="timeline-content"><strong>Check-In:</strong> Entire group of 10 drops bags at the new Châtelet-Les Halles shared apartment.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">1:30 PM</span>
-                    <div class="timeline-content">
-                        <strong>Afternoon Options:</strong> 
-                        <div class="castle-box">
-                            • <em>Option A:</em> Settle in and walk the local Seine riverbanks.<br>
-                            • <em>Option B:</em> <strong><a href="https://www.chateau-de-vincennes.fr/en/" target="_blank">Château de Vincennes</a></strong> (Take a quick 15-min Metro ride to this massive 14th-century fortress and dungeon).
-                        </div>
-                    </div>
+                    <div class="timeline-content"><strong>Check-In:</strong> Entire group of 10 drops bags at the new Châtelet-Les Halles / Le Marais shared apartment.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner Options:</strong>
                         <div class="dining-box">
-                            • <em><a href="https://www.relaisentrecote.fr/" target="_blank">Le Relais de l'Entrecôte</a></em> <span class="price-tag">(~€29-€35)</span> - Fast-paced, iconic steak frites institution.<br>
-                            • <em><a href="https://www.lecoupechou.com/" target="_blank">Le Coupe-Chou</a></em> <span class="price-tag">(~€40-€60+)</span> - Splurge on traditional beef bourguignon in a 17th-century townhouse.
+                            • <em><a href="https://www.relaisentrecote.fr/" target="_blank">Le Relais de l'Entrecôte</a></em> <span class="price-tag">(~€29-€35)</span> - Fast-paced, iconic steak frites institution.
                         </div>
                     </div>
                 </div>
@@ -694,35 +645,21 @@
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 8: Fine Art & Iconic Views</div>
+            <div class="day-title">Day 9: Fine Art & Iconic Views</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:00 AM</span>
                     <div class="timeline-content"><strong>The Masterpieces:</strong> Guided group tour of the Louvre (pre-booked to skip lines).</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">1:00 PM</span>
-                    <div class="timeline-content"><strong>Lunch:</strong> Quick casual café bite near the museum.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">3:00 PM</span>
-                    <div class="timeline-content"><strong>Montmartre & Sacré-Cœur:</strong> Head up to the city's highest point. Explore the stunning white-domed Sacré-Cœur basilica, watch the local painters in Place du Tertre, and take in panoramic afternoon views of Paris.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">8:00 PM</span>
-                    <div class="timeline-content">
-                        <strong>Dinner Options:</strong>
-                        <div class="dining-box">
-                            • <em><a href="https://www.cafedesartsetmetiers.com/" target="_blank">Café des Arts et Métiers</a></em> <span class="price-tag">(~€30-€50)</span> - Large terrace and excellent upscale comfort food.<br>
-                            • <em><a href="https://www.bofingerparis.com/" target="_blank">Brasserie Bofinger</a></em> <span class="price-tag">(~€50-€80+)</span> - Splurge in a gorgeous, historic Belle Époque setting near Bastille.
-                        </div>
-                    </div>
+                    <div class="timeline-content"><strong>Montmartre & Sacré-Cœur:</strong> Head up to the city's highest point. Explore the stunning white-domed basilica and take in panoramic afternoon views.</div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 9: Icons of Paris & Seine Cruise</div>
+            <div class="day-title">Day 10: Icons of Paris & Seine Cruise</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:30 AM</span>
@@ -735,10 +672,6 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">2:00 PM</span>
-                    <div class="timeline-content"><strong>Lunch:</strong> Grab baguettes or crepes on the go.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">4:30 PM</span>
                     <div class="timeline-content"><strong>River Cruise:</strong> Relax legs on a glass-topped boat cruise down the River Seine.</div>
                 </div>
@@ -746,8 +679,33 @@
                     <span class="time-badge">7:30 PM</span>
                     <div class="timeline-content">
                         <strong>Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.bouillon-chartier.com/en/" target="_blank">Bouillon Chartier</a> <span class="price-tag">(~€15-€25)</span> - Legendary, loud 19th-century dining hall. Fun and affordable final night in Paris.</div>
+                        <div class="dining-box"><a href="https://www.bouillon-chartier.com/en/" target="_blank">Bouillon Chartier</a> <span class="price-tag">(~€15-€25)</span> - Legendary, loud 19th-century dining hall.</div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-block">
+            <div class="day-title">Day 11: Le Marais & The Underworld</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="time-badge">10:00 AM</span>
+                    <div class="timeline-content"><strong>Le Marais Shopping:</strong> Spend the morning exploring the boutiques and historic architecture in one of Paris's most stylish districts.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">12:30 PM</span>
+                    <div class="timeline-content">
+                        <strong>Lunch:</strong>
+                        <div class="dining-box">Grab world-famous falafel from <em>L'As du Fallafel</em> in the Jewish Quarter and eat in the nearby Place des Vosges park.</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">3:00 PM</span>
+                    <div class="timeline-content"><strong>The Catacombs:</strong> Descend into the Paris Catacombs (Pre-booked tickets required) for a fascinating, eerie walk through the city's historical ossuary.</div>
+                </div>
+                <div class="timeline-item">
+                    <span class="time-badge">7:30 PM</span>
+                    <div class="timeline-content"><strong>Farewell to Paris Dinner:</strong> Final celebratory dinner before heading to Switzerland tomorrow.</div>
                 </div>
             </div>
         </div>
@@ -758,36 +716,21 @@
         <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?q=80&w=1200&auto=format&fit=crop" alt="Swiss Alps and Lake Lucerne" class="tab-header-img">
         
         <div class="day-block">
-            <div class="day-title">Day 10: High-Speed Science at CERN</div>
+            <div class="day-title">Day 12: High-Speed Science at CERN</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">8:00 AM</span>
                     <div class="timeline-content"><strong>Transit:</strong> Board TGV Lyria train from Paris to Geneva.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">11:30 AM</span>
-                    <div class="timeline-content"><strong>Arrival:</strong> Drop bags at Geneva station hotel. Grab a quick lunch.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">1:00 PM</span>
-                    <div class="timeline-content"><strong>Tram Ride:</strong> Take Tram 18 out to the Meyrin facilities.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">2:00 PM</span>
                     <div class="timeline-content"><strong>CERN Tour:</strong> Guided above-ground tour of control rooms and antimatter factory.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">7:00 PM</span>
-                    <div class="timeline-content">
-                        <strong>Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.holycow.ch/" target="_blank">Holy Cow! Gourmet Burger Co.</a> <span class="price-tag">(~CHF 15-25)</span> - Fast-casual Swiss burgers to recharge after heavy walking.</div>
-                    </div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 11: Geneva to Lucerne Gateway</div>
+            <div class="day-title">Day 13: Geneva to Lucerne Gateway</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:00 AM</span>
@@ -795,30 +738,19 @@
                         <strong>Transit Options:</strong>
                         <div class="castle-box">
                             • <em>Option A:</em> Direct scenic SBB train straight to Lucerne.<br>
-                            • <em>Option B:</em> Route via Montreux to visit <strong><a href="https://www.chillon.ch/en/" target="_blank">Château de Chillon</a></strong> (1,000-year-old island castle) before continuing.
+                            • <em>Option B:</em> Route via Montreux to visit <strong><a href="https://www.chillon.ch/en/" target="_blank">Château de Chillon</a></strong> before continuing.
                         </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">2:30 PM</span>
-                    <div class="timeline-content"><strong>Arrival:</strong> Check into Lucerne station hotel.</div>
                 </div>
                 <div class="timeline-item">
                     <span class="time-badge">4:00 PM</span>
                     <div class="timeline-content"><strong>Old Town:</strong> Walk the historic Chapel Bridge and lakeside.</div>
                 </div>
-                <div class="timeline-item">
-                    <span class="time-badge">7:30 PM</span>
-                    <div class="timeline-content">
-                        <strong>Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.stadtkeller.ch/en/" target="_blank">Stadtkeller</a> <span class="price-tag">(~CHF 30-50)</span> - Lively hall with rösti hash browns, fondue, and local sausages.</div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 12: The Grand Alpine Finale</div>
+            <div class="day-title">Day 14: The Grand Alpine Finale</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">9:30 AM</span>
@@ -829,25 +761,17 @@
                     <div class="timeline-content"><strong>The Ascent:</strong> Ride the world's steepest cogwheel railway up Mount Pilatus.</div>
                 </div>
                 <div class="timeline-item">
-                    <span class="time-badge">1:00 PM</span>
-                    <div class="timeline-content"><strong>The Summit:</strong> Lunch at the top, enjoy panoramic snow-capped views.</div>
-                </div>
-                <div class="timeline-item">
-                    <span class="time-badge">4:00 PM</span>
-                    <div class="timeline-content"><strong>The Descent:</strong> Take the gondolas back down to the city.</div>
-                </div>
-                <div class="timeline-item">
                     <span class="time-badge">8:00 PM</span>
                     <div class="timeline-content">
                         <strong>Farewell Dinner:</strong>
-                        <div class="dining-box"><a href="https://www.balances.ch/en/restaurant" target="_blank">Restaurant Balances</a> <span class="price-tag">(~CHF 50-100+)</span> - Elegant final dinner overlooking the river and historic bridges.</div>
+                        <div class="dining-box"><a href="https://www.balances.ch/en/restaurant" target="_blank">Restaurant Balances</a> <span class="price-tag">(~CHF 50-100+)</span> - Elegant final dinner.</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="day-block">
-            <div class="day-title">Day 13: Homeward Bound</div>
+            <div class="day-title">Day 15: Homeward Bound</div>
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="time-badge">Morning</span>
@@ -860,8 +784,8 @@
     <!-- Budget Content (Split Pricing) -->
     <div id="budget" class="tab-content">
         <div class="day-block">
-            <div class="day-title">Estimated Split Budget (13 Days)</div>
-            <p>Because the Austin duo is detouring into the French countryside while the rest of the group hits Disneyland Paris, the core logistical costs have been separated for clarity.</p>
+            <div class="day-title">Estimated Split Budget (15 Days)</div>
+            <p>Estimates have been updated to reflect the two additional nights of lodging added to London and Paris.</p>
             
             <div class="budget-header">1. Main Group Pricing (8 Travelers, Disney Route)</div>
             <div class="table-container">
@@ -870,37 +794,31 @@
                         <th>Category</th>
                         <th>Low Estimate (Total for 8)</th>
                         <th>High Estimate (Total for 8)</th>
-                        <th>Notes</th>
                     </tr>
                     <tr>
                         <td><strong>Flights (XNA, TUL, MCO)</strong></td>
                         <td>$8,400</td>
                         <td>$11,200</td>
-                        <td>Multi-city tickets (US to LHR, ZRH to US).</td>
                     </tr>
                     <tr>
                         <td><strong>Lodging & Disney Tickets</strong></td>
-                        <td>$7,500</td>
-                        <td>$10,500</td>
-                        <td>Prorated share of London/Paris flats, Disney Marvel Hotel packages, and Swiss station hotels.</td>
+                        <td>$8,500</td>
+                        <td>$11,500</td>
                     </tr>
                     <tr>
                         <td><strong>Disney Half-Board Plus Plan</strong></td>
                         <td>$2,400</td>
                         <td>$2,560</td>
-                        <td>Prepaid plan covering daily breakfast buffets and 4 table-service evening dinners.</td>
                     </tr>
                     <tr>
                         <td><strong>Train Transfers</strong></td>
                         <td>$1,200</td>
                         <td>$1,800</td>
-                        <td>Includes Eurostar (London to Disney), RER A, TGV Lyria, and internal Swiss trains.</td>
                     </tr>
                     <tr>
                         <td><strong>Main Group Subtotal</strong></td>
-                        <td>$19,500</td>
-                        <td>$26,060</td>
-                        <td><em>Cost is approximately $2,437 - $3,257 per person.</em></td>
+                        <td>$20,500</td>
+                        <td>$27,060</td>
                     </tr>
                 </table>
             </div>
@@ -912,35 +830,29 @@
                         <th>Category</th>
                         <th>Low Estimate (Total for 2)</th>
                         <th>High Estimate (Total for 2)</th>
-                        <th>Notes</th>
                     </tr>
                     <tr>
                         <td><strong>Flights (AUS)</strong></td>
                         <td>$1,800</td>
                         <td>$2,400</td>
-                        <td>Multi-city tickets (AUS to LHR, ZRH to AUS). Direct flights often available.</td>
                     </tr>
                     <tr>
                         <td><strong>Lodging (No Disney)</strong></td>
-                        <td>$2,000</td>
-                        <td>$3,000</td>
-                        <td>Prorated share of London/Paris flats, extra boutique hotel nights in London, French countryside B&B, and Swiss station hotels.</td>
+                        <td>$2,500</td>
+                        <td>$3,500</td>
                     </tr>
                     <tr>
                         <td><strong>Train Transfers</strong></td>
                         <td>$450</td>
                         <td>$700</td>
-                        <td>Includes Eurostar (London to Paris), TGV to Loire Valley, TGV Lyria to Geneva, and internal Swiss trains.</td>
                     </tr>
                     <tr>
                         <td><strong>Austin Duo Subtotal</strong></td>
-                        <td>$4,250</td>
-                        <td>$6,100</td>
-                        <td><em>Cost is approximately $2,125 - $3,050 per person.</em></td>
+                        <td>$4,750</td>
+                        <td>$6,600</td>
                     </tr>
                 </table>
             </div>
-            <p style="font-size: 0.85rem; color: #64748b; margin-top: -10px;"><em>*Estimates do not include food outside the meal plan, drinks, daily city transit (Tube/Metro), or separate excursion tickets (Louvre, Mount Pilatus, Château entry fees, etc.).</em></p>
         </div>
     </div>
     
@@ -948,8 +860,7 @@
     <div id="rsvlts" class="tab-content">
         <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1200&auto=format&fit=crop" alt="Cool Shirts" class="tab-header-img">
         <div class="day-block">
-            <div class="day-title rsvlts-title">😎 Joe & Mike's Exclusive RSVLTS Wardrobe</div>
-            <p>Because Joe and Mike are operating on a higher wavelength of style, they have a strict, non-matching RSVLTS KUNUFLEX™ dress code curated specifically to match the vibe of the 13-day itinerary.</p>
+            <div class="day-title rsvlts-title">😎 Joe & Mike's Exclusive RSVLTS Wardrobe (15 Day Edition)</div>
             
             <div class="table-container">
                 <table class="rsvlts-table">
@@ -969,57 +880,67 @@
                         <td>Harry Potter "Bludger, Quaffle, Snitch"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 3:</strong> Travel / Split</td>
+                        <td><strong>Day 3:</strong> London Markets</td>
+                        <td>Harry Potter "The Boy Who Lived"</td>
+                        <td>Disney "Steamboat Willie"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 4:</strong> Travel / Split</td>
                         <td>Marvel "Skyline Slingin'"</td>
                         <td>Marvel "Symbiote Drip"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 4:</strong> Classic Disney</td>
+                        <td><strong>Day 5:</strong> Classic Disney</td>
                         <td>Disney's TaleSpin "Spin It!"</td>
                         <td>Disney's Darkwing Duck "The Duck Night"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 5:</strong> Walt Disney Studios</td>
+                        <td><strong>Day 6:</strong> Walt Disney Studios</td>
                         <td>Marvel "Punishing Panels"</td>
                         <td>Toy Story "Space Ranger Schematics"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 6:</strong> Disney Final Night</td>
+                        <td><strong>Day 7:</strong> Disney Final Night</td>
                         <td>Disney "Don't Touch That Dial"</td>
                         <td>Marvel "Smash & Sling"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 7:</strong> Paris Reunion</td>
+                        <td><strong>Day 8:</strong> Paris Reunion</td>
                         <td>Phineas and Ferb "Doofenshmirtz Evil Incorporated"</td>
                         <td>Phineas and Ferb "Semi-Aquatic Egg-Laying Mammal of Action"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 8:</strong> Fine Art</td>
+                        <td><strong>Day 9:</strong> Fine Art</td>
                         <td>Toy Story "Andy's Toy Box"</td>
                         <td>Chip 'n Dale Rescue Rangers "Ranger Roundup"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 9:</strong> Paris Icons</td>
+                        <td><strong>Day 10:</strong> Paris Icons</td>
                         <td>Disney's DuckTales "Birds of a Treasure"</td>
                         <td>Harry Potter “Dear Mr. Potter”</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 10:</strong> CERN Science</td>
+                        <td><strong>Day 11:</strong> Le Marais</td>
+                        <td>Marvel "Stark Industries"</td>
+                        <td>Disney "A Goofy Movie"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 12:</strong> CERN Science</td>
                         <td>Jurassic Park "Assets Out of Containment"</td>
                         <td>Marvel "High Alert"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 11:</strong> Gateway to Swiss</td>
+                        <td><strong>Day 13:</strong> Gateway to Swiss</td>
                         <td>Disney's Zootopia "Mammal Metropolis"</td>
                         <td>Disney's Zootopia "Ommmmm..."</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 12:</strong> Mount Pilatus Ascent</td>
+                        <td><strong>Day 14:</strong> Mount Pilatus Ascent</td>
                         <td>Disney's Moana "Fear the Kakamora"</td>
                         <td>Disney's Zootopia "Lil Lemmings"</td>
                     </tr>
                     <tr>
-                        <td><strong>Day 13:</strong> Homeward Bound</td>
+                        <td><strong>Day 15:</strong> Homeward Bound</td>
                         <td>Marvel "Frequent-Flyer Miles & Peter"</td>
                         <td>Harry Potter "Mischief Managed"</td>
                     </tr>
@@ -1037,59 +958,64 @@
             <div class="timeline booking-timeline">
                 <div class="timeline-item">
                     <span class="time-badge">10-12 Months Out</span>
-                    <div class="timeline-content">
-                        <strong>Flights & Lodging:</strong> 
-                        <div class="castle-box">
-                            • <strong>Flights:</strong> Major airlines generally release international flights roughly 330 days (11 months) in advance. Start tracking prices immediately for the multi-city routes (US to LHR, ZRH to US).<br>
-                            • <strong>Lodging & Disney Packages:</strong> Book the shared flats in London and Paris, the boutique hotel for the Austin duo, and the Disneyland Paris Marvel Hotel packages as soon as your dates are locked.
-                        </div>
-                    </div>
+                    <div class="timeline-content"><strong>Flights & Lodging:</strong> Book shared flats in London and Paris immediately. Track flights out 330 days.</div>
                 </div>
                 
                 <div class="timeline-item">
-                    <span class="time-badge">Immediately After Disney Booking</span>
-                    <div class="timeline-content">
-                        <strong>Disney Dining (Group of 8):</strong> 
-                        <div class="dining-box">
-                            • <strong>Hotel Guests:</strong> Because you are staying at a Disney Hotel, you can book your table-service dining reservations (like Bistrot Chez Rémy and Captain Jack's) upon receiving your booking confirmation. Book these right away, as they are highly competitive!<br>
-                            • <strong>Non-Hotel Guests:</strong> For reference, guests not staying on property can only book up to 2 months (60 days) in advance.
-                        </div>
-                    </div>
+                    <span class="time-badge">After Disney Booking</span>
+                    <div class="timeline-content"><strong>Disney Dining (Group of 8):</strong> Book table-service restaurants immediately after hotel confirmation.</div>
                 </div>
 
                 <div class="timeline-item">
                     <span class="time-badge">6-8 Months Out</span>
-                    <div class="timeline-content">
-                        <strong>International & High-Speed Trains:</strong> 
-                        <div class="castle-box">
-                            • <strong>Eurostar (London to Paris/Disney):</strong> Tickets typically go on sale 6 to 8 months in advance. Book these as soon as they drop for the lowest fares.<br>
-                            • <strong>TGV & TGV Lyria (France/Swiss):</strong> High-speed trains connecting Paris, the Loire Valley, and Geneva usually open for booking 3 to 6 months in advance.<br>
-                            • <strong>Swiss Domestic (SBB):</strong> Internal Swiss trains can open anywhere from 2 to 10 months in advance. 
-                        </div>
-                    </div>
+                    <div class="timeline-content"><strong>International Trains:</strong> Book Eurostar (London to Paris) and TGV trains for lowest fares.</div>
                 </div>
 
                 <div class="timeline-item">
                     <span class="time-badge">3-4 Months Out</span>
-                    <div class="timeline-content">
-                        <strong>Tours & Theater:</strong> 
-                        <div class="castle-box">
-                            • <strong>Hamilton (London):</strong> Book your West End theater tickets for the entire group.<br>
-                            • <strong>Major Museums:</strong> Secure skip-the-line group tickets for the Louvre and any guided tours for Versailles or the Loire Valley châteaux.
-                        </div>
-                    </div>
+                    <div class="timeline-content"><strong>Tours & Theater:</strong> Secure Hamilton tickets and Louvre group skip-the-line passes.</div>
                 </div>
-                
-                <div class="timeline-item">
-                    <span class="time-badge">1-2 Months Out</span>
-                    <div class="timeline-content">
-                        <strong>Final Details:</strong> 
-                        <div class="castle-box">
-                            • <strong>Non-Disney Dining:</strong> Make reservations for the highly sought-after restaurants in London (Dishoom) and Paris (Le Coupe-Chou).<br>
-                            • <strong>CERN & Excursions:</strong> Finalize tickets for the CERN tour in Geneva and the Mount Pilatus cogwheel ascent in Lucerne.
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lodging Content -->
+    <div id="lodging" class="tab-content">
+        <div class="day-block">
+            <div class="day-title lodging-title">🏨 Lodging Options & Date Strategy</div>
+            
+            <div class="tip-box">
+                <strong>🗓️ Date Check: 15-Day Expansion</strong>
+                By departing on May 28th/29th and flying home exactly 15 days later on June 12th, you utilize your full time window, maintain the vital "Start Day Rule" (landing on Saturday) to avoid museum closures, and add much-needed breathing room to London and Paris!
+            </div>
+
+            <div class="budget-header">London: King's Cross (Days 1-3)</div>
+            <div class="castle-box">
+                • <strong>Airbnb / Vrbo Large Flats:</strong> Search specifically for listings like the <em>"Modern 4BR Kings Cross | Patio + Balcony"</em> flat on Airbnb. Securing a space with a dedicated outdoor patio is critical for 10 people to comfortably share a flat without feeling cramped ($400–$600 total/night).
+            </div>
+
+            <div class="budget-header" style="margin-top: 20px;">Disneyland Paris (Days 4-7)</div>
+            <div class="castle-box">
+                • <strong>Disney Hotel New York - The Art of Marvel:</strong> The ultimate 4-star immersive experience. 
+            </div>
+            
+            <div class="budget-header austin-header" style="margin-top: 20px;">Austin Detour (Days 4-7)</div>
+            <div class="castle-box">
+                • <strong>Kensington Boutique Hotel (London):</strong> Move to a quieter area like Kensington for Days 4-5 ($200–$300/night).<br>
+                • <strong>Loire Valley B&B (France):</strong> Base yourselves in Amboise or Tours for Days 6-7 ($150–$250/night).
+            </div>
+
+            <div class="budget-header" style="margin-top: 20px;">Central Paris: Le Marais / Châtelet (Days 8-11)</div>
+            <p>Reuniting the full group of 10 in the heart of the city.</p>
+            <div class="castle-box">
+                • <strong>Airbnb / Vrbo Large Flats:</strong> Search for properties similar to the <em>"Sublim Apartment 4 chambres Paris Le Marais"</em> or the <em>"LivinParis Luxury AC 4 Bedrooms"</em> flat. <br>
+                • <strong>⚠️ Crucial Tip:</strong> Always ensure the listing explicitly states it has Air Conditioning (Climatisation). Many large historic buildings in Le Marais do not! ($500–$750 total/night).
+            </div>
+
+            <div class="budget-header" style="margin-top: 20px;">Swiss Alps (Days 12-14)</div>
+            <div class="castle-box">
+                • <strong>Geneva (Day 12):</strong> <em>Hotel Cornavin</em> or <em>Warwick Geneva</em> right by the station.<br>
+                • <strong>Lucerne (Days 13-14):</strong> <em>Radisson Blu Hotel, Lucerne</em> or <em>Hotel des Balances</em>.
             </div>
         </div>
     </div>
@@ -1102,37 +1028,26 @@
             <div class="tip-box">
                 <strong>🏛️ The "Start Day" Rule (Avoiding Museum Closures)</strong>
                 Because many major European historical sites have strict weekly closures, <strong>Day 1 of this trip must fall on a Wednesday, Thursday, Friday, or Saturday.</strong>
-                <ul class="standard-list">
-                    <li><strong>The Louvre (Day 8):</strong> Closed on Tuesdays.</li>
-                    <li><strong>Palace of Versailles (Day 9 Option):</strong> Closed on Mondays.</li>
-                    <li><strong>Windsor Castle (Day 2 Option):</strong> Closed on Tuesdays and Wednesdays.</li>
-                </ul>
-                <em>If you start the trip on a Sunday, Monday, or Tuesday, you will hit a closed door at one of these major locations.</em>
             </div>
 
             <div class="tip-box">
                 <strong>🔌 The Power Adapter Gauntlet</strong>
-                You are visiting three distinct regions that use entirely different electrical outlets. Everyone in the group will need a universal adapter or specific plugs for:
-                <ul class="standard-list">
-                    <li><strong>UK (London):</strong> Type G (Three rectangular pins).</li>
-                    <li><strong>France (Disney/Paris):</strong> Type E/C (Two round pins).</li>
-                    <li><strong>Switzerland:</strong> Type J (Three round pins in a triangle). <em>Note: Standard Euro-plugs (Type C) will fit into a Swiss socket, but larger grounded plugs will not!</em></li>
-                </ul>
+                You are visiting three distinct regions that use entirely different electrical outlets. Everyone in the group will need universal adapters.
             </div>
 
             <div class="tip-box">
                 <strong>📍 Essential Transit Apps</strong>
-                Have the group download these apps before leaving the US to make navigating the cities seamless:
-                <ul class="standard-list">
-                    <li><strong>Citymapper:</strong> The absolute best app for navigating London and Paris public transit (much better than Google/Apple Maps for subways).</li>
-                    <li><strong>SNCF Connect:</strong> Essential for managing your digital TGV train tickets in France.</li>
-                    <li><strong>SBB Mobile:</strong> The official app for Swiss travel; perfect for checking live train times and buying point-to-point tickets.</li>
-                </ul>
+                Download <strong>Citymapper</strong> (London/Paris), <strong>SNCF Connect</strong> (France), and <strong>SBB Mobile</strong> (Swiss) before leaving.
             </div>
 
             <div class="tip-box">
                 <strong>🧷 Pin Cataloging on the Go</strong>
-                Export an offline copy of your pin collection spreadsheet directly to your phone. Having your catalog of full and partial sets readily available in your pocket will make it much easier to know exactly what you are looking for when trading for Euro-exclusives at the Pueblo Trading Post in Disneyland Paris!
+                Export an offline copy of your pin collection spreadsheet directly to your phone to make trading for Euro-exclusives at the Pueblo Trading Post a breeze!
+            </div>
+
+            <div class="tip-box">
+                <strong>🧳 Custom Luggage Tags</strong>
+                Since your group is utilizing extensive high-speed rail networks, you'll be storing a lot of bags on shared train racks. Use your multi-material 3D printer to run off identical, brightly colored geometric luggage tags for all 10 travelers. It makes spotting your group's bags from across the train carriage incredibly easy!
             </div>
         </div>
     </div>
