@@ -1,3 +1,23 @@
+The dynamic between US and European pin trading is fascinating! Disneyland Paris cast member lanyards are actually flooded with standard Walt Disney World pins, meaning you will routinely see US pins like Animal Kingdom's Dinosaur ride or WDW Monorails floating around Paris. Because of this, local Parisian traders are not looking for basic US rack pins or standard Hidden Mickeys.
+
+To make high-value trades with local French collectors, you need to bring **WDW Exclusives**. Pack EPCOT Festival exclusives, Mickey's Not-So-Scary Halloween Party pins, Disney Vacation Club (DVC) pins, and Walt Disney World Resort hotel pins. These are highly sought after because European collectors cannot get them without flying to Florida!
+
+For the sets you should be hunting for to update your offline spreadsheet:
+
+* **Attraction Exclusives:** Look for pins featuring Phantom Manor (specifically the Western ghost town elements unique to Paris) and Space Mountain 2 (the Jules Verne steampunk design).
+* **Parisian Themes:** The "Eiffel Tower Collection" (characters wrapped around the tower) and Mickey & Minnie dressed as Parisian locals.
+* **Ratatouille:** Since the movie is set in France and has a massive dedicated plaza, Remy pins are a major local staple.
+* **Limited Editions:** For high-end series (like the "Tales of Magic Castle" or Bastille Day releases), you must secure a digital ticket through the Lineberty app.
+
+As for locations and rules:
+
+* The **Pueblo Trading Post** in Frontierland is the central point of contact for pin collectors and the primary location for limited releases.
+* You can trade a maximum of 2 pins per Cast Member per day, and the pins must be metal, feature the ©Disney mark, and have their corresponding fastener.
+* Never touch a cast member's lanyard or trading board without explicitly asking permission first.
+
+I have integrated all of this into a brand new **"📍 12. Pin Trading"** tab. You can use this code to update the `index.html` file inside your mlbrous-netizen/github.io repository!
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +42,7 @@
             --lodging: #0284c7;
             --packing: #b45309;
             --flight: #0ea5e9;
+            --pins: #db2777;
         }
         
         * {
@@ -149,6 +170,12 @@
             color: white;
         }
 
+        .tab-btn.pins-btn.active {
+            background-color: var(--pins);
+            border-color: var(--pins);
+            color: white;
+        }
+
         .tab-content {
             display: none;
             background: white;
@@ -193,6 +220,7 @@
         .lodging-title { color: var(--lodging); border-bottom: 2px solid var(--lodging); }
         .packing-title { color: var(--packing); border-bottom: 2px solid var(--packing); }
         .flight-title { color: var(--flight); border-bottom: 2px solid var(--flight); }
+        .pins-title { color: var(--pins); border-bottom: 2px solid var(--pins); }
 
         /* Day Map Styling */
         .day-map {
@@ -350,6 +378,7 @@
         <button class="tab-btn lodging-btn" onclick="switchTab(event, 'lodging')">🏨 9. Lodging</button>
         <button class="tab-btn packing-btn" onclick="switchTab(event, 'packing')">🧳 10. Packing List</button>
         <button class="tab-btn flight-btn" onclick="switchTab(event, 'flights')">✈️ 11. Example Flights</button>
+        <button class="tab-btn pins-btn" onclick="switchTab(event, 'pins')">📍 12. Pin Trading</button>
     </div>
 
     <!-- London Content (All 10) -->
@@ -1387,6 +1416,39 @@
         </div>
     </div>
 
+    <!-- Pin Trading Content -->
+    <div id="pins" class="tab-content">
+        <div class="day-block">
+            <div class="day-title pins-title">📍 Ultimate Disneyland Paris Pin Trading Guide</div>
+            
+            <div class="tip-box">
+                <strong>📱 The Lineberty App is Mandatory</strong>
+                If you want to purchase any new Limited Edition (LE) pins (like the "Tales of Magic Castle" series or Bastille Day exclusives), you cannot just walk up to a register. You must secure a digital queuing ticket through the <strong>Lineberty App</strong> to purchase them at the Pueblo Trading Post.
+            </div>
+
+            <div class="budget-header">The "WDW to Paris" Trade Economy</div>
+            <p>Disneyland Paris cast member lanyards are surprisingly full of standard Walt Disney World pins (you will frequently see Animal Kingdom or Monorail pins!). Because of this, local Parisian traders are not looking for basic US rack pins or standard Hidden Mickeys.</p>
+            <div class="castle-box">
+                <strong>What to Bring from the US:</strong> If you want to make high-value trades with local French collectors, you need to bring <strong>WDW Exclusives</strong>. Pack EPCOT Festival exclusives (Food & Wine, Festival of the Arts), Mickey's Not-So-Scary Halloween Party pins, Disney Vacation Club (DVC) pins, and Walt Disney World Resort hotel pins. These are highly sought after because European collectors cannot get them without flying to Florida!
+            </div>
+
+            <div class="budget-header" style="margin-top: 20px;">Paris Exclusives to Hunt For</div>
+            <p>Having your offline pin collection spreadsheet pulled up will make tracking these new European subsets incredibly satisfying.</p>
+            <div class="castle-box">
+                • <strong>Attraction Exclusives:</strong> Look for pins featuring <em>Phantom Manor</em> (specifically the Western ghost town elements unique to Paris) and <em>Space Mountain 2</em> (the Jules Verne steampunk design).<br>
+                • <strong>Parisian Themes:</strong> The "Eiffel Tower Collection" (characters wrapped around the tower) and Mickey & Minnie dressed as Parisian locals (like Chef Mickey).<br>
+                • <strong>Ratatouille:</strong> Since the movie is set in France and has a massive dedicated plaza in the Walt Disney Studios park, Remy pins are a major local staple.
+            </div>
+
+            <div class="budget-header" style="margin-top: 20px;">Top Locations & Etiquette</div>
+            <div class="castle-box">
+                • <strong>The Trading Hub:</strong> The <strong>Pueblo Trading Post</strong> in Frontierland is the absolute epicenter of Paris pin trading. It is primarily open on weekends, and local collectors gather at the tables outside to trade.<br>
+                • <strong>The Rules:</strong> You can trade a maximum of 2 pins per Cast Member per day. Pins must be metal, feature the ©Disney mark, and have their corresponding fastener. <br>
+                • <strong>Etiquette:</strong> Park guests in Paris do not wear lanyards as commonly as they do in the US. When interacting with Cast Members, never touch their lanyard or trading board without explicitly asking permission first.
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <!-- Leaflet Map JS -->
@@ -1492,3 +1554,5 @@
 
 </body>
 </html>
+
+```
